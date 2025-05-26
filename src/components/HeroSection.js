@@ -1,67 +1,33 @@
-import Button from './Button';
-import Image from 'next/image';
+import cx from 'classnames';
+import Button from '@/components/Button';
 
-const HeroSection = () => {
+const HeroSection = ({ className }) => {
   return (
-    <div class='grid grid-flow-col w-full'>
+    <section className={cx(className, 'flex flex-col gap-4 md:flex-row')}>
       {/* Left half */}
-      <div class='flex flex-col w-2/5'>
-        <div>
-          <h1 class='font-bold text-lg'>
-            A place that makes our silver citizens happy
+      <div className='flex flex-col justify-center order-last gap-8 md:order-first '>
+        <div className='text-center md:text-left'>
+          <h1 className='max-w-[22ch] md:max-w-[17ch]'>
+            At Abhyankar’s IAS prepare to witness a transformation to scale{' '}
+            <span className='text-[#e57b3e]'>UPSC & beyond</span>
           </h1>
-          <p>
-            Rainbow Daycare is a safe space designed for your elderly parents
-            and wards to unwind, socialize and learn with their peers
-          </p>
         </div>
-        <div class='flex h-fit flex-row gap-x-1	items-stretch	 justify-between'>
-          <Button
-            props={{
-              text: 'Schedule an appointment',
-              textColorPrimary: false,
-              backgroundPrimary: true,
-            }}
-          />
-          <Button
-            props={{
-              text: 'Learn More',
-              textColorPrimary: true,
-              backgroundPrimary: false,
-            }}
-          />
-        </div>
+
+        <Button
+          className='md:max-w-1/2'
+          text='Contact Us'
+          textColorPrimary={false}
+          backgroundPrimary
+        />
       </div>
 
       {/* Right half */}
-      <div class='grid grid-flow-col w-3/5 py-4'>
-        <div class='flex flex-col h-fit w-full'>
-          <div>
-            <img
-              src='/images/RainbowDayCareHeroSectionImage1.jpg'
-              alt='Logo of Rainbow Day Care'
-            />
-          </div>
-
-          <div>
-            <img
-              src='/images/RainbowDayCareHeroSectionImage3.jpg'
-              alt='Logo of Rainbow Day Care'
-            />
-          </div>
-        </div>
-        <div class='flex flex-col w-fit'>
-          <img
-            src='/images/RainbowDayCareHeroSectionImage2.jpg'
-            alt='Logo of Rainbow Day Care'
-          ></img>
-          <img
-            src='/images/RainbowDayCareHeroSectionImage4.jpg'
-            alt='Logo of Rainbow Day Care'
-          ></img>
+      <div className='order-first'>
+        <div className='text-center '>
+          {/* <h1 className=''>At Abhyankar’s IAS prepare</h1> */}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

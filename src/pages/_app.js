@@ -19,22 +19,19 @@ const leagueSpartanBold = localFont({
   variable: '--font-league-spartan-bold',
 });
 
-console.log(libreBaskerville, '', leagueSpartanBold);
-
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
         <title>Abhyankar’s IAS</title>
       </Head>
-      <Layout>
-        <main
-          className={`${leagueSpartanBold.variable}  ${libreBaskerville.variable}main-body`}
-        >
-          {/* Apply the font class here */}
-          <Component {...pageProps} />
-        </main>
-      </Layout>
+      <Layout />
+      <main
+        className={`${leagueSpartanBold.variable}  ${libreBaskerville.variable}main-body`}
+      >
+        {/* Apply the font class here */}
+        <Component {...pageProps} />
+      </main>
     </>
   );
 }

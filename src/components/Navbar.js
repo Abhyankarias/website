@@ -13,8 +13,8 @@ const navLinks = [
 const Navbar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   return (
-    <nav class='container mx-auto'>
-      <div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+    <nav class='container mx-auto col-span-12'>
+      <div class='flex flex-wrap items-center justify-between p-4'>
         <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
           <img
             src='/images/abhyankars_ias_logo.svg'
