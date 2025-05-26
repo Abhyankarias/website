@@ -13,8 +13,8 @@ const navLinks = [
 const Navbar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   return (
-    <nav class='container mx-auto'>
-      <div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+    <nav class='container mx-auto col-span-12'>
+      <div class='flex flex-wrap items-center justify-between p-4'>
         <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
           <img
             src='/images/abhyankars_ias_logo.svg'
@@ -80,7 +80,7 @@ const Navbar = () => {
         >
           <ul
             class={cx(
-              'flex flex-col items-center p-4 h-fit md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 text-base'
+              'flex flex-col items-center p-4 h-fit md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 text-base'
             )}
           >
             {navLinks.map(({ link, display }) => (

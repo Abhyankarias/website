@@ -6,7 +6,7 @@
 }
 @theme {
   --color-primary: #e57b3e;
-  --color-secondary: #ffffff;
+  --color-secondary: #000000;
   --color-transparent: 'transparent';
 }
 
@@ -45,7 +45,7 @@ h3 {
 h1,
 h2 {
   font-family: var(--font-league-spartan-bold);
-  font-weight: 700;
+  font-weight: 600;
   @apply font-medium md:font-bold;
 }
 
