@@ -4,10 +4,13 @@
   --background: url('/images/backgroundImage.jpg');
   --foreground: #171717;
 }
-@theme {
+@theme inline {
   --color-primary: #e57b3e;
   --color-secondary: #000000;
   --color-transparent: 'transparent';
+  --font-italic: var(--font-libre-baskerville-italic);
+  --font-regular: var(--font-libre-baskerville-regular);
+  --font-bold: var(--font-libre-baskerville-bold);
 }
 
 body {
@@ -17,7 +20,7 @@ body {
   background-size: cover; /* Cover the entire body */
   background-attachment: fixed; /* Image remains fixed on scroll */
   background-position: center; /* Center the image */
-  font-family: 'League Spartan', sans-serif;
+  font-family: var(--font-league-spartan-bold);
   line-height: 1.5;
   color: #000000;
 }
@@ -26,15 +29,15 @@ body {
   color: #000000;
   line-height: 1.5;
   font-size: 1.125rem;
-  font-family: var(--font-libre-baskerville);
+  font-family: var(--font-libre-baskerville-bold);
 }
 
-.body1 {
+/* .body1 {
   @apply text-lg;
 }
 .body2 {
   @apply text-base;
-}
+} */
 
 h1,
 h2,
@@ -67,3 +70,12 @@ h3 {
   line-height: 1.55;
   font-weight: 600;
 }
+
+button {
+  font-family: var(--font-league-spartan-bold);
+  font-size: 20px;
+}
+
+/* p {
+  font-family: var(--font-libre-baskerville-regular);
+} */
