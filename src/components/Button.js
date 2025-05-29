@@ -13,8 +13,8 @@ const Button = (props) => {
     'rounded-md font-bold py-2 h-fit text-nowrap border-2 border-primary',
     classNameProp,
     {
-      ['text-primary']: textColorPrimary,
-      ['text-secondary']: !textColorPrimary,
+      ['color-primary']: textColorPrimary,
+      ['color-secondary']: !textColorPrimary,
       ['bg-primary px-3']: backgroundPrimary,
       ['bg-transparent px-5']: !backgroundPrimary,
       ['px-10']: text.length <= 4,
