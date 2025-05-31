@@ -32,6 +32,10 @@ body {
   font-family: var(--font-libre-baskerville-bold);
 }
 
+.hero-section {
+  font-family: var(--font-league-spartan-bold);
+}
+
 /* .body1 {
   @apply text-lg;
 }
@@ -76,6 +80,7 @@ button {
   font-size: 20px;
 }
 
-/* p {
-  font-family: var(--font-libre-baskerville-regular);
-} */
+p {
+  line-height: 16px;
+  font-size: 16px;
+}

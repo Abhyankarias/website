@@ -8,13 +8,19 @@ const THIRD_PARAGRAPH = ` The educational process expected in and outside our fo
 export default function FounderSection({ className }) {
   return (
     <section
-      className={cx(className, 'flex flex-col gap-4 shadow-lg md:flex-row')}
+      className={cx(
+        className,
+        'flex flex-col gap-4 shadow-lg  rounded-md md:flex-row'
+      )}
+      style={{
+        background: '#FFFFFF',
+      }}
     >
       {/* Photograph, name and title */}
-      <div className='flex flex-col place-items-center gap-2 md:justify-center-safe md:gap-5'>
+      <div className='flex flex-col place-items-center gap-2 mt-4 md:justify-center-safe md:gap-5'>
         <div className='relative max-h-[170] max-w-[200] md:place-self-start'>
           <Image
-            className='mx-auto z-[1] md:place-self-start'
+            className='relative z-[2] mx-auto md:place-self-start'
             sizes='(max-width: 200)'
             height={169}
             width={200}
@@ -22,8 +28,8 @@ export default function FounderSection({ className }) {
             alt='Dr. Ajit Abhyankar'
           />
           <div
-            className='absolute top-0 z-[-1] h-[169] w-[192] rounded-t-md'
-            style={{ backgroundColor: `#e57b3e` }}
+            className='absolute top-0 z-[1] h-[169] w-[192] rounded-t-md '
+            style={{ background: '#e57b3e' }}
           ></div>
         </div>
         <div>
@@ -39,7 +45,7 @@ export default function FounderSection({ className }) {
       </div>
 
       {/* Text section */}
-      <div className='flex flex-col gap-4 w-full text-center text-black pb-10 md:w-[45ch] md:text-left md:pt-10 md:pl-5'>
+      <div className='flex flex-col gap-4 w-[27ch] text-center text-black pb-10 self-center md:w-[45ch] md:text-left md:pt-10 md:pl-5'>
         <p className='font-italic'>{FIRST_PARAGRAPH}</p>
         <p className='font-bold'>{SECOND_PARAGRAPH}</p>
         <p className='font-italic'>{THIRD_PARAGRAPH}</p>
