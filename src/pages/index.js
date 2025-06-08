@@ -1,6 +1,7 @@
 import HeroSection from '@/components/HeroSection';
 import FounderSection from '@/components/FounderSection';
 import AboutUs from '@/components/AboutUs';
+import ObjectivesAndVision from '@/components/ObjectivesAndVision';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection className='mt-10' />
       <FounderSection className='mt-20' />
       <AboutUs className='mt-20' />
+      <ObjectivesAndVision className='mt-20' />
     </div>
   );
 }
