@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 :root {
-  --background: url('/images/backgroundImage.jpg');
+  --background: url('/images/BackgroundImage.jpg');
   --foreground: #171717;
 }
 @theme inline {
@@ -21,15 +21,14 @@ body {
   background-attachment: fixed; /* Image remains fixed on scroll */
   background-position: center; /* Center the image */
   font-family: var(--font-league-spartan-bold);
-  line-height: 1.5;
   color: #000000;
 }
 
 .main-body {
   color: #000000;
-  line-height: 1.5;
+  line-height: 1.625rem;
   font-size: 1.125rem;
-  font-family: var(--font-libre-baskerville-bold);
+  font-family: var(--font-libre-baskerville-regular);
 }
 
 .hero-section {
@@ -81,6 +80,6 @@ button {
 }
 
 p {
-  line-height: 16px;
+  line-height: 1.625rem;
   font-size: 16px;
 }
