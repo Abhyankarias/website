@@ -18,6 +18,26 @@ const WHAT_YOU_WILL_GAIN = [
   `Your fact finding and research skills will get honed which gives you an edge amongst others who still follow the rote learning approach when it comes to competitive exams like UPSC`,
 ];
 
+function CreateList({ listSet }) {
+  return (
+    <ul className='flex flex-col gap-6'>
+      {listSet.map((listContent, listIndex) => (
+        <li key={listIndex} className='flex'>
+          <img
+            className='self-start mx-4'
+            src='images/BulletPoint.svg'
+            alt={`point ${listIndex}`}
+            width='16'
+            height='16'
+          />
+
+          <p className='w-[26ch] md:w-[38ch]'>{listContent}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function AboutUs({ className }) {
   return (
     <section className={className}>
@@ -42,25 +62,5 @@ export default function AboutUs({ className }) {
         </div>
       </div>
     </section>
-  );
-}
-
-function CreateList({ listSet }) {
-  return (
-    <ul className='flex flex-col gap-6'>
-      {listSet.map((listContent, listIndex) => (
-        <li key={listIndex} className='flex'>
-          <img
-            className='self-start mx-4'
-            src='images/BulletPoint.svg'
-            alt={`point ${listIndex}`}
-            width='16'
-            height='16'
-          />
-
-          <p className='w-[26ch] md:w-[38ch]'>{listContent}</p>
-        </li>
-      ))}
-    </ul>
   );
 }
