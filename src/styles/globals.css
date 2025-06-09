@@ -34,7 +34,9 @@ body {
 .hero-section {
   font-family: var(--font-league-spartan-bold);
 }
-
+.title {
+  font-family: var(--font-league-spartan-bold);
+}
 /* .body1 {
   @apply text-lg;
 }
@@ -48,9 +50,7 @@ h3 {
   color: #000000;
 }
 
-h1,
 h2 {
-  font-family: var(--font-league-spartan-bold);
   font-weight: 600;
   @apply font-medium md:font-bold;
 }
@@ -68,7 +68,6 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-league-spartan);
   font-size: 1.125rem;
   line-height: 1.55;
   font-weight: 600;
