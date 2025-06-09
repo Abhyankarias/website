@@ -3,6 +3,7 @@ import FounderSection from '@/components/FounderSection';
 import AboutUs from '@/components/AboutUs';
 import ObjectivesAndVision from '@/components/ObjectivesAndVision';
 import Testimonials from '@/components/Testimonials';
+import Courses from '@/components/Courses';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutUs className='mt-20' />
       <ObjectivesAndVision className='mt-20' />
       <Testimonials className='mt-20' />
+      <Courses className='mt-20' />
     </div>
   );
 }
