@@ -41,23 +41,23 @@ function CreateList({ listSet }) {
 export default function AboutUs({ className }) {
   return (
     <section className={className}>
-      <h1 className='text-center'>{TITLE}</h1>
+      <h1 className='title text-center mb-8'>{TITLE}</h1>
 
       {/* Sub-sections */}
-      <div className='flex flex-col mt-16 gap-4 md:flex-row md:flex-wrap'>
+      <div className='flex flex-col gap-4 md:flex-row md:flex-wrap'>
         {/* Who are we */}
         <div className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-[calc(50%-8px)]'>
-          <h2 className='text-center'>Who are we?</h2>
+          <h2 className='title text-center'>Who are we?</h2>
           <CreateList listSet={WHO_ARE_WE} />
         </div>
         {/* What we do */}
         <div className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-[calc(50%-8px)]'>
-          <h2 className='text-center'>What we do?</h2>
+          <h2 className='title text-center'>What we do?</h2>
           <CreateList listSet={WHAT_WE_DO} />
         </div>
         {/* What you will gain */}
         <div className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-full'>
-          <h2 className='text-center'>What you will gain?</h2>
+          <h2 className='title text-center'>What you will gain?</h2>
           <CreateList listSet={WHAT_YOU_WILL_GAIN} />
         </div>
       </div>
