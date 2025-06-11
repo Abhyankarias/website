@@ -31,30 +31,40 @@ const PROGRAMME_LIST = [
 export default function Courses({ className }) {
   return (
     <section className={className}>
-      <h1 className='title text-center'>{TITLE}</h1>
+      <h1 className='title text-center mb-4'>{TITLE}</h1>
       <div className='flex flex-col gap-4'>
         {/* Card maker */}
         {PROGRAMME_LIST.map(({ name, imgSrc, content }, index) => {
           return (
-            <div key={index} className='bg-[#FFFFFF]'>
+            <div
+              key={index}
+              className='flex flex-col gap-4 bg-[#FFFFFF] rounded-md'
+            >
               <Image
-                className='mx-auto'
+                className='rounded-md'
                 sizes='(max-width: 510)'
-                height={169}
-                width={200}
+                height={245}
+                width={500}
                 src={imgSrc}
-                alt='Picture of Dr. Ajit Abhyankar'
+                alt={`Picture of ${name}`}
               />
-              <h2 className='title text-center'>{name}</h2>
-              {content.map((item, itemIndex) => {
-                return <p key={itemIndex}>{item}</p>;
-              })}
-              <Button
-                className='md:max-w-1/2'
-                text='Learn More'
-                textColorPrimary={false}
-                backgroundPrimary
-              />
+              <div className='flex flex-col p-4 gap-2'>
+                <h2 className='title'>{name}</h2>
+                {content.map((item, itemIndex) => {
+                  return (
+                    <p key={itemIndex} className='font-ls-regular'>
+                      {item}
+                    </p>
+                  );
+                })}
+                <Button
+                  className='md:max-w-1/2'
+                  text='Learn More'
+                  textColorPrimary={false}
+                  backgroundPrimary={false}
+                  style={{ backgroundColor: '#FFF0E8' }}
+                />
+              </div>
             </div>
           );
         })}

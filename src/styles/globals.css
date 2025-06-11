@@ -28,7 +28,7 @@ body {
   color: #000000;
   line-height: 1.625rem;
   font-size: 1.125rem;
-  font-family: var(--font-libre-baskerville-regular);
+  font-family: var(--font-ls-regular);
 }
 
 .hero-section {
