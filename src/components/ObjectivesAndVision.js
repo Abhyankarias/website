@@ -34,7 +34,7 @@ function CreateList({ listSet }) {
             height='36px'
           />
 
-          <p className='w-[26ch]  md:w-[72ch]'>{listContent}</p>
+          <p className='w-[26ch]  md:w-[68ch]'>{listContent}</p>
         </li>
       ))}
     </ul>
@@ -44,6 +44,7 @@ function CreateList({ listSet }) {
 export default function ObjectivesAndVision({ className }) {
   return (
     <section className={className}>
+      <h2 className='text-center '>{TITLE}</h2>
       <div className='flex flex-col mt-16 gap-4 md:flex-row md:flex-wrap'>
         {/* Who are we */}
         <div className='flex flex-col rounded-md pt-8 pb-8 gap-8 md:'>
