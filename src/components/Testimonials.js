@@ -2,6 +2,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 
 import Carousel from './Carousel';
+import Button from './Button';
 
 const TITLE = ` Success stories & testimonial`;
 const ALUMNI_LIST = [
@@ -128,38 +129,50 @@ function truncateText(text) {
 export default function Testimonials({ className }) {
   return (
     <section className={className}>
-      <h1 className='title text-center'>{TITLE}</h1>
+      <h1 className='title text-center mb-8'>{TITLE}</h1>
       <Carousel>
         {ALUMNI_LIST.map(({ name, imgSrc, rank, institute, text }, index) => {
           return (
             <div
-              className='w-full bg-[#FFF8F5] rounded-2xl p-8 md:px-20 md:py-12'
+              className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl p-8 gap-4 md:px-20 md:py-12'
               key={index}
             >
-              <div className='mx-auto relative max-h-[170] max-w-[200] md:place-self-start'>
-                <Image
-                  className='relative z-[2] mx-auto md:place-self-start'
-                  sizes='(max-width: 200)'
-                  src={imgSrc}
-                  alt={`Picture of ${name}`}
-                  width={169}
-                  height={200}
-                />
-                <div
-                  className='absolute top-0 z-[1] h-[169] w-[192] rounded-t-md '
-                  style={{ background: '#e57b3e' }}
-                ></div>
+              <div className='flex flex-col gap-2'>
+                <div className='mx-auto relative max-h-[170] max-w-[200] md:place-self-start'>
+                  <Image
+                    className='relative z-[2] mx-auto md:place-self-start'
+                    style={{ maxHeight: '170px' }}
+                    src={imgSrc}
+                    alt={`Picture of ${name}`}
+                    width={169}
+                    height={170}
+                  />
+                  <div
+                    className='absolute bottom-0 z-[1] h-[139] w-[157] rounded-t-md '
+                    style={{ background: '#e57b3e' }}
+                  ></div>
+                </div>
+
+                <p className='text-center title'>
+                  <span>{name}</span>
+                  <span className='block md:inline-block md:ml-2'>
+                    {rank || institute}
+                  </span>
+                </p>
               </div>
 
-              <p className='text-center title'>
-                <span>{name}</span>
-                <span className='block md:inline-block md:ml-2'>
-                  {rank || institute}
-                </span>
-              </p>
-              <p className='text-center whitespace-pre-wrap'>
-                {truncateText(text[0])}
-              </p>
+              <div className='flex flex-col gap-2'>
+                <p className='text-center whitespace-pre-wrap'>
+                  {truncateText(text[0])}
+                </p>
+                <Button
+                  className='md:max-w-1/2'
+                  text='View Story'
+                  textColorPrimary={false}
+                  backgroundPrimary={false}
+                  style={{ backgroundColor: '#FFF0E8' }}
+                />
+              </div>
             </div>
           );
         })}

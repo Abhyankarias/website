@@ -31,7 +31,7 @@ const PROGRAMME_LIST = [
 export default function Courses({ className }) {
   return (
     <section className={className}>
-      <h1 className='title text-center mb-4'>{TITLE}</h1>
+      <h1 className='title text-center mb-8'>{TITLE}</h1>
       <div className='flex flex-col gap-4'>
         {/* Card maker */}
         {PROGRAMME_LIST.map(({ name, imgSrc, content }, index) => {
