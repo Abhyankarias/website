@@ -11,6 +11,7 @@
   --font-italic: var(--font-libre-baskerville-italic);
   --font-regular: var(--font-libre-baskerville-regular);
   --font-bold: var(--font-libre-baskerville-bold);
+  --font-ls-regular: var(--font-league-spartan-regular);
 }
 
 body {
@@ -20,7 +21,6 @@ body {
   background-size: cover; /* Cover the entire body */
   background-attachment: fixed; /* Image remains fixed on scroll */
   background-position: center; /* Center the image */
-  font-family: var(--font-league-spartan-bold);
   color: #000000;
 }
 
@@ -37,6 +37,7 @@ body {
 .title {
   font-family: var(--font-league-spartan-bold);
 }
+
 /* .body1 {
   @apply text-lg;
 }
