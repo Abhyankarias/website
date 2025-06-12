@@ -3,6 +3,7 @@ import {
   libreBaskervilleItalic,
   libreBaskervilleBold,
   leagueSpartanBold,
+  leagueSpartanRegular,
 } from '@/styles/fonts';
 import '@/styles/globals.css';
 
@@ -17,7 +18,7 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <Layout />
       <main
-        className={`${libreBaskervilleRegular.variable} ${libreBaskervilleItalic.variable} ${libreBaskervilleBold.variable} ${leagueSpartanBold.variable} main-body`}
+        className={`${libreBaskervilleRegular.variable} ${libreBaskervilleItalic.variable} ${libreBaskervilleBold.variable} ${leagueSpartanBold.variable} ${leagueSpartanRegular.variable} main-body`}
       >
         {/* Apply the font class here */}
         <Component {...pageProps} />
