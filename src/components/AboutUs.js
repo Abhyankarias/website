@@ -46,17 +46,32 @@ export default function AboutUs({ className }) {
       {/* Sub-sections */}
       <div className='flex flex-col gap-4 md:flex-row md:flex-wrap'>
         {/* Who are we */}
-        <div className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-[calc(50%-8px)]'>
+        <div
+          className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-[calc(50%-8px)]'
+          style={{
+            background: '#FFFFFF',
+          }}
+        >
           <h2 className='title text-center'>Who are we?</h2>
           <CreateList listSet={WHO_ARE_WE} />
         </div>
         {/* What we do */}
-        <div className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-[calc(50%-8px)]'>
+        <div
+          className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-[calc(50%-8px)]'
+          style={{
+            background: '#FFFFFF',
+          }}
+        >
           <h2 className='title text-center'>What we do?</h2>
           <CreateList listSet={WHAT_WE_DO} />
         </div>
         {/* What you will gain */}
-        <div className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-full'>
+        <div
+          className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-full'
+          style={{
+            background: '#FFFFFF',
+          }}
+        >
           <h2 className='title text-center'>What you will gain?</h2>
           <CreateList listSet={WHAT_YOU_WILL_GAIN} />
         </div>
