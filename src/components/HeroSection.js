@@ -6,12 +6,11 @@ const HeroSection = ({ className }) => {
     <section className={cx(className, 'flex flex-col gap-4 md:flex-row')}>
       {/* Left half */}
       <div className='flex flex-col justify-center order-last gap-8 md:order-first '>
-        <div className='text-center md:text-left'>
-          <h2 className='max-w-[25ch] px-4 md:max-w-[17ch] hero-section'>
-            At Abhyankar’s IAS prepare to witness a transformation to scale{' '}
-            <span className='text-[#e57b3e]'>UPSC & beyond</span>
-          </h2>
-        </div>
+        <h2 className='mx-auto text-center md:text-left max-w-[25ch] md:max-w-[17ch] hero-section'>
+          At Abhyankar’s IAS prepare to witness a transformation to scale{' '}
+          <span className='text-[#e57b3e]'>UPSC & beyond</span>
+        </h2>
+        <div className=''></div>
 
         <Button
           className='md:max-w-1/2'
