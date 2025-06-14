@@ -1,11 +1,12 @@
 import Navbar from './Navbar';
 
-export default function Layout({ children }) {
+export default function Layout({ className }) {
   return (
     <div className='max-w-dvw bg-[#ECECE7]'>
-      <Navbar>
+      <Navbar className={className} />
+      {/* <Navbar>
         <main>{children}</main>
-      </Navbar>
+      </Navbar> */}
     </div>
   );
 }

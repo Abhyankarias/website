@@ -1,10 +1,12 @@
 import React, { Children } from 'react';
 import cx from 'classnames';
-import {
-  PrevButton,
-  NextButton,
-  usePrevNextButtons,
-} from './CarouselArrowButtons';
+// import {
+//   PrevButton,
+//   NextButton,
+//   usePrevNextButtons,
+// } from './CarouselArrowButtons';
+
+import { DotButton, useDotButton } from './CarouselDotButton';
 import styles from './carousel.module.css';
 import useEmblaCarousel from 'embla-carousel-react';
 
@@ -15,12 +17,18 @@ const Carousel = (props) => {
 
   const containerClasses = cx('container mx-auto', styles.embla__viewport);
 
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
+  // const {
+  //   prevBtnDisabled,
+  //   nextBtnDisabled,
+  //   onPrevButtonClick,
+  //   onNextButtonClick,
+  // } = usePrevNextButtons(emblaApi);
+
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
+
+  console.log('scrollSnaps; ', scrollSnaps);
+
   let slideIndex = 0;
   return (
     <section className={cx(styles.embla, 'md:relative', className)}>
@@ -34,22 +42,16 @@ const Carousel = (props) => {
         </div>
       </div>
 
-      <div
-        className={cx(
-          'static flex gap-x-16 justify-center',
-          'md:w-full md:justify-between md:absolute md:top-[150%] md:-mt-[50%]'
-        )}
-      >
-        <PrevButton
-          className='md:translate-x-[-48px]'
-          onClick={onPrevButtonClick}
-          disabled={prevBtnDisabled}
-        />
-        <NextButton
-          className='md:translate-x-[48px]'
-          onClick={onNextButtonClick}
-          disabled={nextBtnDisabled}
-        />
+      <div className='embla__dots'>
+        {scrollSnaps.map((_, index) => (
+          <DotButton
+            key={index}
+            onClick={() => onDotButtonClick(index)}
+            className={'embla__dot'.concat(
+              index === selectedIndex ? ' embla__dot--selected' : ''
+            )}
+          />
+        ))}
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import cx from 'classnames';
 
-import Button from './Button';
+// import Button from './Button';
 
 const navLinks = [
   { link: 'courses', display: 'Courses' },
@@ -10,10 +10,10 @@ const navLinks = [
   { link: 'testimonials', display: 'Testimonials' },
 ];
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   return (
-    <nav class='container mx-auto col-span-12'>
+    <nav className={cx(className, 'container mx-auto col-span-12')}>
       <div class='flex flex-wrap items-center justify-between p-4'>
         <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
           <img
@@ -87,20 +87,20 @@ const Navbar = () => {
               <li key={link}>
                 <Link
                   href={`/${link === 'home' ? '' : link}`}
-                  class='font-bold block py-2 px-3 rounded md:p-0'
+                  class='font-ls-regular block py-2 px-3 rounded md:p-0'
                   aria-current='page'
                 >
                   {display}
                 </Link>
               </li>
             ))}
-            <Button
+            {/* <Button
               props={{
                 text: 'Contact Us',
                 textColorPrimary: false,
                 backgroundPrimary: true,
               }}
-            />
+            /> */}
           </ul>
         </div>
       </div>
@@ -109,32 +109,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// import Image from "next/image";
-
-// const Navbar = () => {
-//   return (
-//     <div class="flex flex-row">
-//       <Image
-//         src="/images/RainbowDayCareLogo.svg"
-//         width={200}
-//         height={200}
-//         alt="Logo of Rainbow Day Care"
-//       ></Image>
-//       <div class="flex flex-row w-full">
-//         <div class="flex flex-row">
-//           <a>Home</a>
-//           <a>Testimonials</a>
-//           <a>Gallery</a>
-//           <a>Patient Portal</a>
-//           <a>About Us</a>
-//         </div>
-//         <button class="h-33 w-117" color="#1e85a2">
-//           Contact Us
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
