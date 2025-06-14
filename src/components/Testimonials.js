@@ -79,7 +79,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
     text: [
       `I was fortunate enough to be associated with the ABIAS family for over 5 years and with sir for around 3 and half years.`,
       `The stress on sir’s teaching was always ‘ meaning of each and every word’. A typical class would go like this :
-“Why must one pursue excellence ?”`,
+“Why must one pursue excellence?”`,
       `Like always we’d see each others’ blank faces and reply “To give your best..?”`,
       `“To achieve the best.. ?”. Another student said.`,
       `“Very Sad, why, why why excellence ? Because EVERYTIME I WANT TO GET IT RIGHT! ” Said Sir. These were the words that ingrained in my mind. In this way sir would free our minds and help us identify what our goals must be.

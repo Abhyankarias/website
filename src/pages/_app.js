@@ -8,7 +8,7 @@ import {
 import '@/styles/globals.css';
 
 import Head from 'next/head';
-import Layout from '@/components/layout';
+import Layout from '@/components/Layout';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -16,7 +16,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <title>Abhyankar’s IAS</title>
       </Head>
-      <Layout />
+      <Layout className={`${leagueSpartanBold.variable}`} />
       <main
         className={`${libreBaskervilleRegular.variable} ${libreBaskervilleItalic.variable} ${libreBaskervilleBold.variable} ${leagueSpartanBold.variable} ${leagueSpartanRegular.variable} main-body`}
       >

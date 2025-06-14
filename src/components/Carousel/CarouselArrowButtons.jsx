@@ -29,7 +29,7 @@ export const usePrevNextButtons = (emblaApi) => {
 
     onSelect(emblaApi);
     emblaApi.on('reInit', onSelect).on('select', onSelect);
-  }, [emblaApi, onSelect]);
+  }, [emblaApi]); // removed 'onSelect' from dependency list
 
   return {
     prevBtnDisabled,

@@ -17,16 +17,12 @@ export default function Contact({ className }) {
         {/* medium screen - right half */}
         <div className='flex flex-col w-full  gap-4'>
           <input
-            className='border rounded-md py-1 px-3'
+            className='font-ls-regular border rounded-md py-1 px-3'
             placeholder='Enter Email or Phone Number'
-            // value={contact}
-            // onChange={(e) => setContact(e.target.value)}
           ></input>
           <textarea
-            className='border rounded-md align-middle py-1 px-3 min-h-[112px]'
+            className='font-ls-regular border rounded-md align-middle py-1 px-3 min-h-[112px]'
             placeholder='Write a message or question (if any)'
-            // value={emailBody}
-            // onChange={(e) => setEmailBody(e.target.value)}
           ></textarea>
           <div>
             <Button
@@ -34,7 +30,6 @@ export default function Contact({ className }) {
               text='Send'
               textColorPrimary={false}
               backgroundPrimary={true}
-              //   onClick={sendMail}
             />
           </div>
         </div>
