@@ -12,8 +12,9 @@ const navLinks = [
 
 const Navbar = ({ className }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
+
   return (
-    <nav className={cx(className, 'container mx-auto col-span-12')}>
+    <nav className={cx(className, 'navbar container mx-auto col-span-12')}>
       <div class='flex flex-wrap items-center justify-between p-4'>
         <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
           <img
@@ -87,7 +88,7 @@ const Navbar = ({ className }) => {
               <li key={link}>
                 <Link
                   href={`/${link === 'home' ? '' : link}`}
-                  class='font-ls-regular block py-2 px-3 rounded md:p-0'
+                  class='font-ls-regular text-[20px] block py-2 px-3 rounded md:p-0'
                   aria-current='page'
                 >
                   {display}
