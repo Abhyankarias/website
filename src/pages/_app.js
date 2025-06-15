@@ -16,7 +16,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <title>Abhyankar’s IAS</title>
       </Head>
-      <Layout className={`${leagueSpartanBold.variable}`} />
+      <Layout className={`${leagueSpartanRegular.variable}`} />
       <main
         className={`${libreBaskervilleRegular.variable} ${libreBaskervilleItalic.variable} ${libreBaskervilleBold.variable} ${leagueSpartanBold.variable} ${leagueSpartanRegular.variable} main-body`}
       >
