@@ -4,6 +4,7 @@ import {
   libreBaskervilleBold,
   leagueSpartanBold,
   leagueSpartanRegular,
+  leagueSpartanMedium,
 } from '@/styles/fonts';
 import '@/styles/globals.css';
 
@@ -16,7 +17,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <title>Abhyankar’s IAS</title>
       </Head>
-      <Layout className={`${leagueSpartanRegular.variable}`} />
+      <Layout className={`${leagueSpartanMedium.variable}`} />
       <main
         className={`${libreBaskervilleRegular.variable} ${libreBaskervilleItalic.variable} ${libreBaskervilleBold.variable} ${leagueSpartanBold.variable} ${leagueSpartanRegular.variable} main-body`}
       >
