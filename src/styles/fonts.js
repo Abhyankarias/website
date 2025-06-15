@@ -36,6 +36,13 @@ const leagueSpartanRegular = localFont({
   variable: '--font-league-spartan-regular',
 });
 
+const leagueSpartanMedium = localFont({
+  src: '../fonts/leagueSpartan-medium.woff',
+  display: 'swap',
+  preload: true,
+  variable: '--font-league-spartan-medium',
+});
+
 // console.log('leagueSpartanRegular: ', leagueSpartanRegular);
 
 export {
@@ -44,4 +51,5 @@ export {
   libreBaskervilleBold,
   leagueSpartanBold,
   leagueSpartanRegular,
+  leagueSpartanMedium,
 };

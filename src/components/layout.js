@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 export default function Layout({ className, children }) {
   return (
-    <div className={cx(className, 'max-w-dvw bg-[#ECECE7]')}>
+    <div className={cx(className, 'max-w-dvw md:bg-[#ECECE7]')}>
       {/* <Navbar className={className} /> */}
       <Navbar>
         <main>{children}</main>
