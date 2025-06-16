@@ -10,7 +10,7 @@ export default function FounderSection({ className }) {
     <section
       className={cx(
         className,
-        'flex flex-col gap-6 shadow-lg rounded-md md:flex-row md:w-fit md:gap-30'
+        'flex flex-col gap-6 shadow-lg rounded-md md:flex-row md:gap-30'
       )}
       style={{
         background: '#FFFFFF',
