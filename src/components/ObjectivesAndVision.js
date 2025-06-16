@@ -45,12 +45,8 @@ export default function ObjectivesAndVision({ className }) {
   return (
     <section className={className}>
       <h2 className='title text-center mb-8'>{TITLE}</h2>
-      <div className='flex flex-col gap-4 md:flex-row md:flex-wrap'>
-        {/* Who are we */}
-        <div className='flex flex-col rounded-md pt-8 pb-8 gap-8 md:'>
-          <CreateList listSet={OBJECTIVES_VISION_LIST} />
-        </div>
-      </div>
+      {/* Who are we */}
+      <CreateList listSet={OBJECTIVES_VISION_LIST} />
     </section>
   );
 }
