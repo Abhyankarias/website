@@ -3,7 +3,9 @@ import Button from '@/components/Button';
 
 const HeroSection = ({ className }) => {
   return (
-    <section className={cx(className, 'flex flex-col gap-4 md:flex-row')}>
+    <section
+      className={cx(className, 'flex flex-col gap-4 md:flex-row md:w-fit')}
+    >
       {/* Left half */}
       <div className='flex flex-col justify-center order-last gap-8 md:order-first '>
         <h2 className='mx-auto text-center md:text-left max-w-[25ch] md:max-w-[17ch] hero-section'>

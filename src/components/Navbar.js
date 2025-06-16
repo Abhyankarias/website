@@ -12,15 +12,32 @@ const navLinks = [
 
 const Navbar = ({ className }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
+  //const navbarRef = useRef(null);
+
+  // useEffect(() => {
+  //   const mainContent = document.querySelector('.main-body');
+  //   console.log(
+  //     'mainContent: ',
+  //     mainContent,
+  //     mainContent.getBoundingClientRect().width
+  //   );
+
+  //   if (mainContent && navbarRef.current) {
+  //     const updateNavbarWidth = () => {
+  //       const mainWidth = mainContent.getBoundingClientRect().width;
+  //       navbarRef.current.style.width = `${mainWidth}px`;
+  //     };
+
+  //     updateNavbarWidth(); // Initial update
+  //     window.addEventListener('resize', updateNavbarWidth); // Update on resize
+  //   }
+
+  //   return () => window.removeEventListener('resize', updateNavbarWidth); // Cleanup
+  // }, []);
 
   return (
-    <nav
-      className={cx(
-        className,
-        'navbar container mx-auto col-span-12 py-[20px]'
-      )}
-    >
-      <div class='flex flex-wrap items-center justify-between p-4'>
+    <nav className={cx(className, 'navbar col-span-12 py-[20px]')}>
+      <div class='flex flex-wrap items-center justify-between'>
         <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
           <img
             src='/images/abhyankars_ias_logo.svg'
