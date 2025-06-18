@@ -134,7 +134,7 @@ export default function Testimonials({ className }) {
         {ALUMNI_LIST.map(({ name, imgSrc, rank, institute, text }, index) => {
           return (
             <div
-              className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl p-8 gap-4 md:px-20 md:py-12'
+              className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl p-8 gap-4 drop-shadow-md md:px-20 md:py-12'
               key={index}
             >
               <div className='flex flex-col gap-2'>
@@ -153,7 +153,7 @@ export default function Testimonials({ className }) {
                   ></div>
                 </div>
 
-                <p className='text-center title'>
+                <p className='title text-center md:text-left'>
                   <span>{name}</span>
                   <span className='block md:inline-block md:ml-2'>
                     {rank || institute}
