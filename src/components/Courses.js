@@ -32,7 +32,7 @@ export default function Courses({ className }) {
   return (
     <section className={className}>
       <h1 className='title text-center mb-8'>{TITLE}</h1>
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-4 md:flex-row md:justify-between'>
         {/* Card maker */}
         {PROGRAMME_LIST.map(({ name, imgSrc, content }, index) => {
           return (
@@ -58,7 +58,7 @@ export default function Courses({ className }) {
                   );
                 })}
                 <Button
-                  className='md:max-w-1/2'
+                  className='font-league-spartan-medium md:w-full'
                   text='Learn More'
                   textColorPrimary={false}
                   backgroundPrimary={false}

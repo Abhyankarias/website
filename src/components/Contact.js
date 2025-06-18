@@ -26,7 +26,7 @@ export default function Contact({ className }) {
           ></textarea>
           <div>
             <Button
-              className='w-full md:w-auto'
+              className='font-league-spartan-medium w-full md:w-auto'
               text='Send'
               textColorPrimary={false}
               backgroundPrimary={true}
