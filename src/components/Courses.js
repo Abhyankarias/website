@@ -38,7 +38,7 @@ export default function Courses({ className }) {
           return (
             <div
               key={index}
-              className='flex flex-col gap-4 bg-[#FFFFFF] rounded-md'
+              className='flex flex-col gap-4 bg-[#FFFFFF] rounded-md drop-shadow-md'
             >
               <Image
                 className='rounded-md'

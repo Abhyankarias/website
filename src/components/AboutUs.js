@@ -47,7 +47,7 @@ export default function AboutUs({ className }) {
       <div className='flex flex-col gap-4 md:flex-row md:flex-wrap'>
         {/* Who are we */}
         <div
-          className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-[calc(50%-8px)]'
+          className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-[calc(50%-8px)] drop-shadow-md'
           style={{
             background: '#FFFFFF',
           }}
@@ -57,7 +57,7 @@ export default function AboutUs({ className }) {
         </div>
         {/* What we do */}
         <div
-          className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-[calc(50%-8px)]'
+          className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-[calc(50%-8px)] drop-shadow-md'
           style={{
             background: '#FFFFFF',
           }}
@@ -67,7 +67,7 @@ export default function AboutUs({ className }) {
         </div>
         {/* What you will gain */}
         <div
-          className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-full'
+          className='flex flex-col border border-2 border-(--color-primary) rounded-md pt-8 pb-8 gap-8 md:w-full drop-shadow-md'
           style={{
             background: '#FFFFFF',
           }}
