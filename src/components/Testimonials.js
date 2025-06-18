@@ -134,11 +134,11 @@ export default function Testimonials({ className }) {
         {ALUMNI_LIST.map(({ name, imgSrc, rank, institute, text }, index) => {
           return (
             <div
-              className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl p-8 gap-4 drop-shadow-md md:px-20 md:py-12'
+              className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl p-8 gap-4 drop-shadow-md md:flex-row md:px-20 md:py-12'
               key={index}
             >
               <div className='flex flex-col gap-2'>
-                <div className='mx-auto relative max-h-[170] max-w-[200] md:place-self-start'>
+                <div className='mx-auto relative max-h-[170] max-w-[200]'>
                   <Image
                     className='relative z-[2] mx-auto md:place-self-start'
                     style={{ maxHeight: '170px' }}
@@ -161,12 +161,12 @@ export default function Testimonials({ className }) {
                 </p>
               </div>
 
-              <div className='flex flex-col gap-2'>
-                <p className='text-center whitespace-pre-wrap'>
+              <div className='flex flex-col gap-2 md:gap-20'>
+                <p className='text-center whitespace-pre-wrap md:text-left'>
                   {truncateText(text[0])}
                 </p>
                 <Button
-                  className='md:max-w-1/2'
+                  className='font-league-spartan-medium md:max-w-1/5'
                   text='View Story'
                   textColorPrimary={false}
                   backgroundPrimary={false}

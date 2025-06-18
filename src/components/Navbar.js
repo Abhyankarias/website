@@ -122,7 +122,6 @@ const Navbar = ({ className }) => {
               text='Contact Us'
               textColorPrimary={false}
               backgroundPrimary
-              on
             />
           </ul>
         </div>
