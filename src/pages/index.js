@@ -4,7 +4,6 @@ import AboutUs from '@/components/AboutUs';
 import ObjectivesAndVision from '@/components/ObjectivesAndVision';
 import Testimonials from '@/components/Testimonials';
 import Courses from '@/components/Courses';
-import Contact from '@/components/Contact';
 
 export default function Home() {
   return (
