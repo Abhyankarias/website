@@ -40,14 +40,13 @@ export default function Courses({ className }) {
               key={index}
               className='flex flex-col gap-4 bg-[#FFFFFF] rounded-md drop-shadow-md'
             >
-              <Image
-                className='rounded-md'
-                sizes='(max-width: 510)'
-                height={245}
-                width={500}
+              <img
+                className='rounded-md max-h-[171.84px] md:max-h-[234.23px]'
                 src={imgSrc}
                 alt={`Picture of ${name}`}
+                // style={{ maxHeight: '171.84px' }}
               />
+
               <div className='flex flex-col p-4 gap-2'>
                 <h2 className='title'>{name}</h2>
                 {content.map((item, itemIndex) => {

@@ -17,13 +17,16 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <title>Abhyankar’s IAS</title>
       </Head>
-      <Layout className={`${leagueSpartanMedium.variable}`} />
-      <main
-        className={`${libreBaskervilleRegular.variable} ${libreBaskervilleItalic.variable} ${libreBaskervilleBold.variable} ${leagueSpartanBold.variable} ${leagueSpartanRegular.variable} ${leagueSpartanMedium.variable} main-body`}
+      <Layout
+        className={`${leagueSpartanBold.variable} ${leagueSpartanMedium.variable} ${leagueSpartanRegular.variable}`}
       >
-        {/* Apply the font class here */}
-        <Component {...pageProps} />
-      </main>
+        <main
+          className={`${libreBaskervilleRegular.variable} ${libreBaskervilleItalic.variable} ${libreBaskervilleBold.variable} ${leagueSpartanBold.variable} ${leagueSpartanRegular.variable} ${leagueSpartanMedium.variable} main-body`}
+        >
+          {/* Apply the font class here */}
+          <Component {...pageProps} />
+        </main>
+      </Layout>
     </>
   );
 }

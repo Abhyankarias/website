@@ -15,7 +15,6 @@ export default function Home() {
       <ObjectivesAndVision className='mt-20' />
       <Testimonials className='mt-20' />
       <Courses className='mt-20' />
-      <Contact className='mt-20' />
     </div>
   );
 }

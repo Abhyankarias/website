@@ -25,7 +25,7 @@ function CreateList({ listSet }) {
   return (
     <ul className='flex flex-col gap-6'>
       {listSet.map(({ imgSrc, listContent }, listIndex) => (
-        <li key={listIndex} className='flex bg-[#FFF0E8]'>
+        <li key={listIndex} className='flex bg-[#FFF0E8] p-2'>
           <img
             className='self-start md:self-center mx-4'
             src={imgSrc}
