@@ -24,7 +24,7 @@ function CreateList({ listSet }) {
       {listSet.map((listContent, listIndex) => (
         <li key={listIndex} className='flex'>
           <img
-            className='self-start mx-4'
+            className='self-start mx-4 pt-2'
             src='images/BulletPoint.svg'
             alt={`point ${listIndex}`}
             width='16'

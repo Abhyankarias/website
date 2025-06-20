@@ -15,7 +15,7 @@ const HeroSection = ({ className }) => {
         <div className=''></div>
 
         <Button
-          className='md:max-w-1/2'
+          className='font-league-spartan-medium md:max-w-1/2'
           text='Contact Us'
           textColorPrimary={false}
           backgroundPrimary

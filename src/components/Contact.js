@@ -3,11 +3,11 @@ import Button from '@/components/Button';
 export default function Contact({ className }) {
   return (
     <section className={className}>
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-4 rounded-md p-4 md:flex-row md:justify-between'>
         {/* medium screen - left half */}
         <div className='flex flex-col gap-4'>
           <h2 className='title'>{'Have any questions'}</h2>
-          <p className='font-ls-regular w-full md:w-[72ch]'>
+          <p className='font-ls-regular w-full md:w-[36ch]'>
             {
               'Contact us if you have any questions or want learn more about the courses, our team will get in touch with you.'
             }
@@ -15,7 +15,7 @@ export default function Contact({ className }) {
         </div>
 
         {/* medium screen - right half */}
-        <div className='flex flex-col w-full  gap-4'>
+        <div className='flex flex-col w-full gap-4 md:max-w-2/5'>
           <input
             className='font-ls-regular border rounded-md py-1 px-3'
             placeholder='Enter Email or Phone Number'
