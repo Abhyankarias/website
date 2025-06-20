@@ -41,7 +41,7 @@ const Navbar = ({ className }) => {
         <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
           <img
             src='/images/abhyankars_ias_logo.svg'
-            className='max-h-[98px]'
+            className='h-[98px]'
             alt='Flowbite Logo'
           />
         </a>
