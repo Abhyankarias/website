@@ -6,7 +6,7 @@ const TITLE = 'Courses';
 const PROGRAMME_LIST = [
   {
     name: 'Foundation Programme',
-    imgSrc: '/images/FoundationProgramme.png',
+    imgSrc: 'images/FoundationProgramme.png',
     content: [
       'Integrated with 1 years civil service preparations',
       'Eligibility : 12th pass/ undergraduate',
@@ -17,7 +17,7 @@ const PROGRAMME_LIST = [
   },
   {
     name: 'Master in Social Studies',
-    imgSrc: '/images/MasterInSocialStudies.png',
+    imgSrc: 'images/MasterInSocialStudies.png',
     content: [
       'Integrated with 2 years civil service preparations',
       'Eligibility : Graduation/ final year aspirants',

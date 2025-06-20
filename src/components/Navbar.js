@@ -40,7 +40,7 @@ const Navbar = ({ className }) => {
       <div class='flex flex-wrap items-center justify-between'>
         <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
           <img
-            src='/images/abhyankars_ias_logo.svg'
+            src='images/abhyankars_ias_logo.svg'
             className='h-[98px]'
             alt='Flowbite Logo'
           />
