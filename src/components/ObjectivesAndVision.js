@@ -34,7 +34,7 @@ function CreateList({ listSet }) {
             height='36px'
           />
 
-          <p className='w-[26ch]  md:w-[68ch]'>{listContent}</p>
+          <p className='w-[26ch]  md:w-[82ch]'>{listContent}</p>
         </li>
       ))}
     </ul>
