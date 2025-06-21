@@ -1,7 +1,7 @@
 .embla {
   margin: auto;
   --slide-spacing: 1rem;
-  --slide-size: fit-content; /* --slide-size: 100%; */
+  --slide-size: 100%;
   --text-high-contrast-rgb-value: rgb(49, 49, 49);
   --detail-medium-contrast: rgb(234, 234, 234);
   --text-body: rgb(54, 49, 61);

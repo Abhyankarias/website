@@ -1,6 +1,3 @@
-import useEmblaCarousel from 'embla-carousel-react';
-import Image from 'next/image';
-
 import Carousel from './Carousel';
 import Button from './Button';
 
@@ -134,13 +131,13 @@ export default function Testimonials({ className }) {
         {ALUMNI_LIST.map(({ name, imgSrc, rank, institute, text }, index) => {
           return (
             <div
-              className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl p-8 gap-4 drop-shadow-md md:flex-row'
+              className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl p-10 gap-4 drop-shadow-md md:flex-row'
               key={index}
             >
               <div className='flex flex-col gap-2'>
-                <div className='mx-auto relative max-h-[170] max-w-[200]'>
+                <div className='mx-auto relative max-h-[170] max-w-[200] md:ms-0'>
                   <img
-                    className='relative z-[2] mx-auto md:place-self-start'
+                    className='relative z-[2]'
                     src={imgSrc}
                     alt={`Picture of ${name}`}
                     style={{ maxHeight: '170px' }}
@@ -154,21 +151,22 @@ export default function Testimonials({ className }) {
                     height={170}
                   /> */}
                   <div
-                    className='absolute bottom-0 z-[1] h-[139] w-[157] rounded-t-md '
+                    className='absolute bottom-0 z-[1] h-[139] w-[157] rounded-md '
                     style={{ background: '#e57b3e' }}
                   ></div>
                 </div>
 
                 <p className='title text-center md:text-left'>
                   <span>{name}</span>
-                  <span className='block md:inline-block md:ml-2'>
+                  <br />
+                  <span className='block md:inline-block'>
                     {rank || institute}
                   </span>
                 </p>
               </div>
 
-              <div className='flex flex-col gap-2 md:gap-20'>
-                <p className='text-center whitespace-pre-wrap md:text-left'>
+              <div className='flex flex-col gap-2 md:gap-6'>
+                <p className='text-center whitespace-pre-wrap md:w-[45ch] md:text-left'>
                   {truncateText(text[0])}
                 </p>
                 <Button
