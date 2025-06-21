@@ -3,11 +3,11 @@ import Button from '@/components/Button';
 export default function Contact({ className }) {
   return (
     <section className={className}>
-      <div className='flex flex-col gap-4 rounded-md md:flex-row md:justify-between'>
+      <div className='flex flex-col gap-4 rounded-md md:flex-row md:justify-between md:pt-15 md:pb-9'>
         {/* medium screen - left half */}
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 md:pt-3'>
           <h2 className='title'>{'Have any questions'}</h2>
-          <p className='font-ls-regular w-full md:w-[36ch]'>
+          <p className='font-ls-regular w-full md:w-[36ch] md:me-2'>
             {
               'Contact us if you have any questions or want learn more about the courses, our team will get in touch with you.'
             }

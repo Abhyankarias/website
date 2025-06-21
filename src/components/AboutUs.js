@@ -18,7 +18,7 @@ const WHAT_YOU_WILL_GAIN = [
   `Your fact finding and research skills will get honed which gives you an edge amongst others who still follow the rote learning approach when it comes to competitive exams like UPSC`,
 ];
 
-function CreateList({ listSet }) {
+function CreateList({ listSet, className }) {
   return (
     <ul className='flex flex-col gap-6'>
       {listSet.map((listContent, listIndex) => (
@@ -31,7 +31,7 @@ function CreateList({ listSet }) {
             height='16'
           />
 
-          <p className='w-[26ch] md:w-[38ch]'>{listContent}</p>
+          <p className={cx('w-[26ch] md:w-[38ch]', className)}>{listContent}</p>
         </li>
       ))}
     </ul>
@@ -73,7 +73,7 @@ export default function AboutUs({ className }) {
           }}
         >
           <h2 className='title text-center'>What you will gain?</h2>
-          <CreateList listSet={WHAT_YOU_WILL_GAIN} />
+          <CreateList listSet={WHAT_YOU_WILL_GAIN} className={'md:w-[80ch]'} />
         </div>
       </div>
     </section>
