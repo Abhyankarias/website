@@ -165,8 +165,8 @@ export default function Testimonials({ className }) {
                 </p>
               </div>
 
-              <div className='flex flex-col gap-2 md:gap-6'>
-                <p className='text-center whitespace-pre-wrap md:w-[45ch] md:text-left'>
+              <div className='flex flex-col gap-2 md:gap-6 md:pt-7'>
+                <p className='text-center whitespace-pre-wrap md:w-[70ch] md:text-left'>
                   {truncateText(text[0])}
                 </p>
                 <Button
