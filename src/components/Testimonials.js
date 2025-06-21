@@ -8,7 +8,7 @@ const TITLE = ` Success stories & testimonial`;
 const ALUMNI_LIST = [
   {
     name: `Swapnil Mahajan`,
-    imgSrc: '/SwapnilMahajan.png',
+    imgSrc: 'images/SwapnilMahajan.png',
     rank: `IPS, (CSE-2016, AIR-720)`,
     institute: ``,
     text: [
@@ -32,7 +32,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Vinod Patil`,
-    imgSrc: '/VinodPatil.png',
+    imgSrc: 'images/VinodPatil.png',
     rank: `AIR-132, CSE 2019`,
     institute: ``,
     text: [
@@ -42,7 +42,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Maithili Korde`,
-    imgSrc: '/MaithiliKorde.png',
+    imgSrc: 'images/MaithiliKorde.png',
     rank: `AIR-663, CSE 2017`,
     institute: ``,
     text: [
@@ -52,7 +52,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Kiran S`,
-    imgSrc: '/KiranS.png',
+    imgSrc: 'images/KiranS.png',
     rank: `AIR-302, CSE-2016`,
     institute: `IRS(IT)`,
     text: [
@@ -65,7 +65,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `G Ravikiran`,
-    imgSrc: '/GRavikiran.png',
+    imgSrc: 'images/GRavikiran.png',
     rank: `AIR-986, CSE 2014`,
     institute: ``,
     text: [
@@ -74,7 +74,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Bharat Reddy`,
-    imgSrc: '/BharatReddy.png',
+    imgSrc: 'images/BharatReddy.png',
     rank: `AIR-120, CSE-2014`,
     text: [
       `I was fortunate enough to be associated with the ABIAS family for over 5 years and with sir for around 3 and half years.`,
@@ -103,7 +103,7 @@ Another incident I would like to explain here, once a student had asked “Sir, 
   },
   {
     name: `Shatarupa Mishra`,
-    imgSrc: '/ShatarupaMishra.png',
+    imgSrc: 'images/ShatarupaMishra.png',
     rank: ``,
     institute: `IRS(IT)`,
     text: [
