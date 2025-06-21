@@ -2,7 +2,7 @@
 
 :root {
   @media (min-width: 48rem) {
-    --background: url('/images/BackgroundImage.jpg');
+    --background: url('images/BackgroundImage.jpg');
   }
   --background: #ffffff;
   --foreground: #171717;

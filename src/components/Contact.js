@@ -3,7 +3,7 @@ import Button from '@/components/Button';
 export default function Contact({ className }) {
   return (
     <section className={className}>
-      <div className='flex flex-col gap-4 rounded-md md:flex-row md:justify-between md:pt-15 md:pb-9'>
+      <div className='flex flex-col gap-4 pb-4 rounded-md md:flex-row md:justify-between md:pt-15 md:pb-9'>
         {/* medium screen - left half */}
         <div className='flex flex-col gap-4 md:pt-3'>
           <h2 className='title'>{'Have any questions'}</h2>
