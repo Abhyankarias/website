@@ -22,7 +22,7 @@ function CreateList({ listSet }) {
   return (
     <ul className='flex flex-col gap-6'>
       {listSet.map((listContent, listIndex) => (
-        <li key={listIndex} className='flex'>
+        <li key={listIndex} className='flex pe-3'>
           <img
             className='self-start mx-4 pt-2'
             src='images/BulletPoint.svg'
