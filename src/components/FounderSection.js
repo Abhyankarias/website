@@ -1,6 +1,7 @@
 import cx from 'classnames';
-import Image from 'next/image';
 
+const FOUNDER_NAME = 'Dr. Ajit Abhyankar';
+const FOUNDER_IMAGE = 'images/AjitAbhyankar.png';
 const FIRST_PARAGRAPH = `The ultimate aim of education is human refinement. Education should enable the learner to formulate a positive outlook towards life and to accept a stand which suits both the well-being of the individual and society,at large.`;
 const SECOND_PARAGRAPH = `The attitude and potential to work has determined the human race's destiny, progress and cultural development`;
 const THIRD_PARAGRAPH = ` The educational process expected in and outside our formal schools should concentrate upon inculcating concepts, abilities, attitudes and values in tune with this 'work culture `;
@@ -19,13 +20,13 @@ export default function FounderSection({ className }) {
       {/* Photograph, name and title */}
       <div className='flex flex-col place-items-center gap-2 mt-[17px] md:gap-5 md:pb-[83px] md:pt-[67px] md:ps-[68px]'>
         <div className='relative max-h-[170] max-w-[200] md:place-self-start'>
-          <Image
+          <img
             className='relative z-[2] mx-auto md:place-self-start'
             sizes='(max-width: 200)'
             height={169}
             width={200}
-            src='images/AjitAbhyankar.png'
-            alt='Picture of Dr. Ajit Abhyankar'
+            src={FOUNDER_IMAGE}
+            alt={`Picture of ${FOUNDER_NAME}`}
           />
           <div
             className='absolute top-0 z-[1] h-[169] w-[192] rounded-t-md '
