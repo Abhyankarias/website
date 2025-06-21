@@ -2,7 +2,7 @@
 
 :root {
   @media (min-width: 48rem) {
-    --background: url('images/BackgroundImage.jpg');
+    --background: url('/images/backgroundImage.jpg');
   }
   --background: #ffffff;
   --foreground: #171717;
@@ -86,5 +86,5 @@ h3 {
 
 p {
   line-height: 1.625rem;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
