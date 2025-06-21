@@ -50,7 +50,9 @@ const Carousel = (props) => {
             className={'embla__dot'.concat(
               index === selectedIndex ? ' embla__dot--selected' : ''
             )}
-          />
+          >
+            &#x2022;
+          </DotButton>
         ))}
       </div> */}
     </section>
