@@ -42,7 +42,7 @@ const Carousel = (props) => {
         </div>
       </div>
 
-      <div className='embla__dots'>
+      {/* <div className='embla__dots'>
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
@@ -52,7 +52,7 @@ const Carousel = (props) => {
             )}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };
