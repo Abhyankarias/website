@@ -2,7 +2,7 @@
 
 :root {
   @media (min-width: 48rem) {
-    --background: url('/images/backgroundImage.jpg');
+    --background: url(/images/backgroundImage.jpg);
   }
   --background: #ffffff;
   --foreground: #171717;
@@ -20,11 +20,10 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  background-repeat: no-repeat; /* Prevent image from repeating */
-  background-size: cover; /* Cover the entire body */
-  background-attachment: fixed; /* Image remains fixed on scroll */
-  background-position: center; /* Center the image */
+  /* background: var(--background); */
+  background-repeat: repeat repeat; /* Prevent image from repeating */
+  background-size: contain; /* Cover the entire body */
+  /* background-attachment: fixed;  Image remains fixed on scroll */
   color: #000000;
 }
 
