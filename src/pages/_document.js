@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { getImageProps } from 'next/image'
+import Image, { getImageProps } from 'next/image'
 import {
   libreBaskervilleRegular,
   libreBaskervilleItalic,
@@ -22,6 +22,7 @@ function getBackgroundImage(srcSet = '') {
 
 export default function Document() {
 
+  // style={/* style */}
   const {
     props: { srcSet },
   } = getImageProps({ alt: '', width: 320, height: 320, src: '/images/backgroundImage.jpg' })
@@ -31,7 +32,6 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body className={`antialiased ${libreBaskervilleRegular.variable} ${libreBaskervilleItalic.variable} ${libreBaskervilleBold.variable} ${leagueSpartanBold.variable} ${leagueSpartanRegular.variable} ${leagueSpartanMedium.variable}`}
-        style={style}
       >
         <Main />
         <NextScript />

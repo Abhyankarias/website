@@ -1,16 +1,9 @@
-import {
-  libreBaskervilleRegular,
-  libreBaskervilleItalic,
-  libreBaskervilleBold,
-  leagueSpartanBold,
-  leagueSpartanRegular,
-  leagueSpartanMedium,
-} from '@/styles/fonts';
+import Image, { getImageProps } from 'next/image'
 import '@/styles/globals.css';
 
 import Head from 'next/head';
 import Layout from '@/components/layout';
-import { getImageProps } from 'next/image'
+
 
 function getBackgroundImage(srcSet = '') {
   const imageSet = srcSet
@@ -23,33 +16,20 @@ function getBackgroundImage(srcSet = '') {
   return `image-set(${imageSet})`
 }
 
-/*
-
-  className={`${libreBaskervilleRegular.variable} ${libreBaskervilleItalic.variable} ${libreBaskervilleBold.variable} ${leagueSpartanBold.variable} ${leagueSpartanRegular.variable} ${leagueSpartanMedium.variable} main-body`}
-  style={style}
-*/
-
 export default function MyApp({ Component, pageProps }) {
+
   const {
     props: { srcSet },
-  } = getImageProps({ alt: '', width: 128, height: 128, src: '/images/backgroundImage.jpg' })
+  } = getImageProps({ alt: '', width: 320, height: 320, src: '/images/backgroundImage.jpg' })
   const backgroundImage = getBackgroundImage(srcSet)
-  const style = { height: '100vh', width: '100vw', backgroundImage }
+  const style = { height: '100%', width: '100%', backgroundImage }
 
   return (
     <>
       <Head>
         <title>Abhyankar’s IAS</title>
-        {/* 
-        className={`${leagueSpartanBold.variable} ${leagueSpartanMedium.variable} ${leagueSpartanRegular.variable}`}
-        <link
-          rel='preload'
-          href='/images/BackgroundImage.jpg'
-          as='image'
-          media='(min-width: 48rem)'
-        /> */}
       </Head>
-      <Layout >
+      <Layout style={style} >
         {/* Apply the font class here */}
         <Component {...pageProps} />
       </Layout>

@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import Image from 'next/image';
 
 const TITLE = 'About us';
 
@@ -23,12 +24,12 @@ function CreateList({ listSet, className }) {
     <ul className='flex flex-col gap-6'>
       {listSet.map((listContent, listIndex) => (
         <li key={listIndex} className='flex pe-3'>
-          <img
+          <Image
             className='self-start mx-4 pt-2'
-            src='images/BulletPoint.svg'
+            src='/images/BulletPoint.svg'
             alt={`point ${listIndex}`}
-            width='16'
-            height='16'
+            width={16}
+            height={16}
           />
 
           <p className={cx('w-[26ch] md:w-[38ch]', className)}>{listContent}</p>

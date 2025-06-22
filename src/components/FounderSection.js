@@ -19,12 +19,12 @@ export default function FounderSection({ className }) {
       {/* Photograph, name and title */}
       <div className='flex flex-col place-items-center gap-2 mt-[17px] md:gap-5 md:pb-[83px] md:pt-[67px] md:ps-[68px]'>
         <div className='relative max-h-[170] max-w-[200] md:place-self-start'>
-          <img
+          <Image
             className='relative z-[2] mx-auto md:place-self-start'
             sizes='(max-width: 200)'
             height={169}
             width={200}
-            src='images/AjitAbhyankar.png'
+            src='/images/AjitAbhyankar.png'
             alt='Picture of Dr. Ajit Abhyankar'
           />
           <div
