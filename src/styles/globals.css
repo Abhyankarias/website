@@ -36,7 +36,9 @@ body {
 }
 
 .hero-section {
+  line-height: 130%;
   font-family: var(--font-league-spartan-bold);
+  font-size: clamp(1.813rem, 2vw + 1.5rem, 3.25rem);
 }
 
 .title {
