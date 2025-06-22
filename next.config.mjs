@@ -18,7 +18,7 @@ const nextConfig = (phase, { defaultConfig }) => {
     },
   }
   //console.log('nextConfig', JSON.stringify(returnObject, null, 2));
-  return { ...defaultConfig, ...returnObject };
+  return { ...(defaultConfig || {}), ...returnObject };
 };
 
 export default nextConfig;
