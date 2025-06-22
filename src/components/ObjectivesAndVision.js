@@ -44,7 +44,7 @@ function CreateList({ listSet }) {
 export default function ObjectivesAndVision({ className }) {
   return (
     <section className={className}>
-      <h2 className='title text-center mb-8'>{TITLE}</h2>
+      <h1 className='title text-center mb-8'>{TITLE}</h1>
       {/* Who are we */}
       <CreateList listSet={OBJECTIVES_VISION_LIST} />
     </section>

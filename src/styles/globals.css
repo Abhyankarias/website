@@ -64,9 +64,8 @@ h2 {
 }
 
 h1 {
-  font-size: 1.75rem;
-  line-height: 1.19;
-  @apply md:text-5xl;
+  font-size: clamp(2rem, 2vw + 1.75rem, 3rem);
+  line-height: normal;
 }
 
 h2 {
@@ -76,8 +75,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1.125rem;
-  line-height: 1.55;
+  /* font-size: 1.125rem; */
+  /* line-height: 1.55; */
   font-weight: 600;
 }
 
