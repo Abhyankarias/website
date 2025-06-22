@@ -2,7 +2,7 @@ import { PHASE_PRODUCTION_SERVER } from 'next/constants.js';
 /** @type {import('next').NextConfig} */
 
 
-const nextConfig = (phase) => {
+const nextConfig = (phase, { defaultConfig }) => {
   const basePath = phase === PHASE_PRODUCTION_SERVER ? '/website' : '';
   const returnObject = {
     reactStrictMode: true,
@@ -14,7 +14,8 @@ const nextConfig = (phase) => {
       contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     },
   }
-  return returnObject;
+  console.log('nextConfig', JSON.stringify(returnObject, null, 2));
+  return { ...defaultConfig, ...returnObject };
 };
 
 export default nextConfig;
