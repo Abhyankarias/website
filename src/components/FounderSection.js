@@ -37,7 +37,7 @@ export default function FounderSection({ className }) {
             Dr. Ajit Abhyankar
           </div>
           <div className='w-full text-center md:text-left'>
-            <p className='font-italic text-[20px] md:w-[23ch]'>
+            <p className='font-italic md:w-[23ch]'>
               Our Founder and Guiding Light
             </p>
           </div>

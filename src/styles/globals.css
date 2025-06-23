@@ -69,9 +69,10 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
-  @apply font-medium md:font-bold;
-  @apply md:text-4xl;
+  font-size: clamp(1.5rem, 2vw + 1.5rem, 1.875rem);
+  line-height: normal;
+  /* @apply font-medium md:font-bold;
+  @apply md:text-4xl; */
 }
 
 h3 {
@@ -86,6 +87,6 @@ h3 {
 } */
 
 p {
-  line-height: 1.625rem;
+  line-height: normal;
   font-size: 1.125rem;
 }
