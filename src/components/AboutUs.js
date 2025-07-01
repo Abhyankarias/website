@@ -25,7 +25,7 @@ function CreateList({ listSet, className }) {
         <li key={listIndex} className='flex pe-3'>
           <img
             className='self-start mx-4 pt-2'
-            src='images/BulletPoint.svg'
+            src='/website/images/BulletPoint.svg'
             alt={`point ${listIndex}`}
             width='16'
             height='16'

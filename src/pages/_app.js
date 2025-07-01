@@ -16,12 +16,6 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Abhyankar’s IAS</title>
-        {/* <link
-          rel='preload'
-          href='/images/BackgroundImage.jpg'
-          as='image'
-          media='(min-width: 48rem)'
-        /> */}
       </Head>
       <Layout
         className={`${leagueSpartanBold.variable} ${leagueSpartanMedium.variable} ${leagueSpartanRegular.variable}`}

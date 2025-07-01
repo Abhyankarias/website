@@ -4,19 +4,19 @@ const TITLE = 'Objectives and Vision';
 
 const OBJECTIVES_VISION_LIST = [
   {
-    imgSrc: 'images/ObjectivesAndVision1.svg',
+    imgSrc: '/website/images/ObjectivesAndVision1.svg',
     listContent: `The Academy is dedicated to preparing aspirants for the Civil Services Examination through rigorous, targeted training.`,
   },
   {
-    imgSrc: 'images/ObjectivesAndVision2.svg',
+    imgSrc: '/website/images/ObjectivesAndVision2.svg',
     listContent: `With dynamic training modules led by experienced mentors and experts, the Academy ensures aspirants meet the high standards required for success. `,
   },
   {
-    imgSrc: 'images/ObjectivesAndVision3.svg',
+    imgSrc: '/website/images/ObjectivesAndVision3.svg',
     listContent: `Its vision is to nurture young talent with top-notch academic and intellectual support, empowering them to qualify with distinction and serve society with responsibility and excellence.`,
   },
   {
-    imgSrc: 'images/ObjectivesAndVision4.svg',
+    imgSrc: '/website/images/ObjectivesAndVision4.svg',
     listContent: `Recognizing the challenges and prestige of a career in the Indian Administrative Services, the Academy equips students to excel in the UPSC’s three-stage process: Preliminary, Mains, and Interview`,
   },
 ];
