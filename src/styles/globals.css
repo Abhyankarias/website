@@ -2,7 +2,7 @@
 
 :root {
   @media (min-width: 48rem) {
-    --background: url('/abhyankarias.github.io/website/images/backgroundImage.jpg');
+    --background: url(/images/backgroundImage.jpg);
   }
   --background: #ffffff;
   --foreground: #171717;
