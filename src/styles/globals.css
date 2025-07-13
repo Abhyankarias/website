@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
 :root {
-  @media (min-width: 48rem) {
+  /* @media (min-width: 48rem) {
     --background: url(/images/backgroundImage.jpg);
   }
-  --background: #ffffff;
+  --background: #ffffff; */
   --foreground: #171717;
 }
 @theme inline {

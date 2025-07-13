@@ -40,10 +40,7 @@ const Navbar = ({ className }) => {
   return (
     <nav className={cx(className, 'navbar col-span-12 py-[20px]')}>
       <div class='flex flex-wrap items-center justify-between'>
-        <a
-          href='/website'
-          class='flex items-center space-x-3 rtl:space-x-reverse'
-        >
+        <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
           <Image
             className='relative z-[2] mx-auto md:place-self-start'
             height={98}
