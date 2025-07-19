@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
 :root {
-  @media (min-width: 48rem) {
+  /* @media (min-width: 48rem) {
     --background: url(/images/backgroundImage.jpg);
   }
-  --background: #ffffff;
+  --background: #ffffff; */
   --foreground: #171717;
 }
 @theme inline {
@@ -20,10 +20,11 @@
 
 body {
   color: var(--foreground);
-  /* background: var(--background); */
-  background-repeat: repeat repeat; /* Prevent image from repeating */
-  background-size: contain; /* Cover the entire body */
-  /* background-attachment: fixed;  Image remains fixed on scroll */
+  background: var(--background);
+  background-repeat: repeat; /* Prevent image from repeating */
+  /* background-size: cover; Cover the entire body */
+  background-attachment: fixed; /* Image remains fixed on scroll */
+  background-position: center; /* Center the image */
   color: #000000;
 }
 
@@ -35,7 +36,9 @@ body {
 }
 
 .hero-section {
+  line-height: 130%;
   font-family: var(--font-league-spartan-bold);
+  font-size: clamp(1.813rem, 2vw + 1.5rem, 3.25rem);
 }
 
 .title {
@@ -61,20 +64,20 @@ h2 {
 }
 
 h1 {
-  font-size: 1.75rem;
-  line-height: 1.19;
-  @apply md:text-5xl;
+  font-size: clamp(2rem, 2vw + 1.75rem, 3rem);
+  line-height: normal;
 }
 
 h2 {
-  font-size: 1.5rem;
-  @apply font-medium md:font-bold;
-  @apply md:text-4xl;
+  font-size: clamp(1.5rem, 2vw + 1.5rem, 1.875rem);
+  line-height: normal;
+  /* @apply font-medium md:font-bold;
+  @apply md:text-4xl; */
 }
 
 h3 {
-  font-size: 1.125rem;
-  line-height: 1.55;
+  /* font-size: 1.125rem; */
+  /* line-height: 1.55; */
   font-weight: 600;
 }
 
@@ -84,6 +87,6 @@ h3 {
 } */
 
 p {
-  line-height: 1.625rem;
+  line-height: normal;
   font-size: 1.125rem;
 }

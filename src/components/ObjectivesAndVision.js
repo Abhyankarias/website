@@ -4,19 +4,19 @@ const TITLE = 'Objectives and Vision';
 
 const OBJECTIVES_VISION_LIST = [
   {
-    imgSrc: 'images/ObjectivesAndVision1.svg',
+    imgSrc: '/images/ObjectivesAndVision1.svg',
     listContent: `The Academy is dedicated to preparing aspirants for the Civil Services Examination through rigorous, targeted training.`,
   },
   {
-    imgSrc: 'images/ObjectivesAndVision2.svg',
+    imgSrc: '/images/ObjectivesAndVision2.svg',
     listContent: `With dynamic training modules led by experienced mentors and experts, the Academy ensures aspirants meet the high standards required for success. `,
   },
   {
-    imgSrc: 'images/ObjectivesAndVision3.svg',
+    imgSrc: '/images/ObjectivesAndVision3.svg',
     listContent: `Its vision is to nurture young talent with top-notch academic and intellectual support, empowering them to qualify with distinction and serve society with responsibility and excellence.`,
   },
   {
-    imgSrc: 'images/ObjectivesAndVision4.svg',
+    imgSrc: '/images/ObjectivesAndVision4.svg',
     listContent: `Recognizing the challenges and prestige of a career in the Indian Administrative Services, the Academy equips students to excel in the UPSC’s three-stage process: Preliminary, Mains, and Interview`,
   },
 ];
@@ -44,7 +44,7 @@ function CreateList({ listSet }) {
 export default function ObjectivesAndVision({ className }) {
   return (
     <section className={className}>
-      <h2 className='title text-center mb-8'>{TITLE}</h2>
+      <h1 className='title text-center mb-8'>{TITLE}</h1>
       {/* Who are we */}
       <CreateList listSet={OBJECTIVES_VISION_LIST} />
     </section>

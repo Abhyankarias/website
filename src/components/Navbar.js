@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import cx from 'classnames';
+import Image from 'next/image';
 
 import Button from './Button';
+// import abhyankars_ias_logo from '../public/abhyankars_ias_logo.svg';
 
 const navLinks = [
   { link: 'courses', display: 'Courses' },
@@ -39,10 +41,12 @@ const Navbar = ({ className }) => {
     <nav className={cx(className, 'navbar col-span-12 py-[20px]')}>
       <div class='flex flex-wrap items-center justify-between'>
         <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
-          <img
-            src='images/abhyankars_ias_logo.svg'
-            className='h-[98px]'
-            alt='Flowbite Logo'
+          <Image
+            className='relative z-[2] mx-auto md:place-self-start'
+            height={98}
+            width={86}
+            src='/website/images/logo.png'
+            alt='Abhyankar IAS Logo'
           />
         </a>
         <button

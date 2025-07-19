@@ -1,11 +1,9 @@
 import { PHASE_PRODUCTION_SERVER } from 'next/constants.js';
 
-
 const nextConfig = (phase, { defaultConfig }) => {
-
   /**
-  * @type {import('next').NextConfig}
-  */
+   * @type {import('next').NextConfig}
+   */
   const basePath = phase === PHASE_PRODUCTION_SERVER ? '/website' : '';
   const returnObject = {
     reactStrictMode: true,
@@ -16,7 +14,7 @@ const nextConfig = (phase, { defaultConfig }) => {
       contentDispositionType: 'attachment',
       contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     },
-  }
+  };
   //console.log('nextConfig', JSON.stringify(returnObject, null, 2));
   return { ...(defaultConfig || {}), ...returnObject };
 };

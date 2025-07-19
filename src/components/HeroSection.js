@@ -8,7 +8,7 @@ const HeroSection = ({ className }) => {
     >
       {/* Left half */}
       <div className='flex flex-col justify-center order-last gap-8 md:order-first '>
-        <h2 className='mx-auto text-center md:text-left max-w-[25ch] md:max-w-[17ch] hero-section'>
+        <h2 className='hero-section mx-auto text-center md:text-left max-w-[25ch] md:max-w-[17ch]'>
           At Abhyankar’s IAS prepare to witness a transformation to scale{' '}
           <span className='text-[#e57b3e]'>UPSC & beyond</span>
         </h2>
