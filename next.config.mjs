@@ -8,7 +8,8 @@ const nextConfig = (phase, { defaultConfig }) => {
   const returnObject = {
     reactStrictMode: true,
     basePath,
-    assetPrefix: 'https://abhyankarias.github.io',
+    assetPrefix:
+      phase === PHASE_PRODUCTION_SERVER ? 'https://abhyankarias.github.io' : '',
     images: {
       dangerouslyAllowSVG: true,
       contentDispositionType: 'attachment',
