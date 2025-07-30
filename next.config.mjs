@@ -4,12 +4,14 @@ const nextConfig = (phase, { defaultConfig }) => {
   /**
    * @type {import('next').NextConfig}
    */
-  const basePath = phase === PHASE_PRODUCTION_SERVER ? '/website' : '';
+  const basePath = phase === PHASE_PRODUCTION_SERVER ? 'website' : '';
   const returnObject = {
     reactStrictMode: true,
     basePath,
     assetPrefix:
-      phase === PHASE_PRODUCTION_SERVER ? 'https://abhyankarias.github.io' : '',
+      phase === PHASE_PRODUCTION_SERVER
+        ? 'https://abhyankarias.github.io/'
+        : '',
     images: {
       dangerouslyAllowSVG: true,
       contentDispositionType: 'attachment',
