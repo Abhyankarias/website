@@ -8,7 +8,6 @@ export default function testimonials() {
     <Link href='/testimonials'>
       <div className='container mx-auto'>
         <Testimonials className='mt-20' />
-        <Courses className='mt-20' />
       </div>
     </Link>
   );
