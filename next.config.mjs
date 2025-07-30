@@ -8,7 +8,7 @@ const nextConfig = (phase, { defaultConfig }) => {
   const returnObject = {
     reactStrictMode: true,
     basePath,
-    assetPrefix: basePath,
+    assetPrefix: 'https://abhyankarias.github.io',
     images: {
       dangerouslyAllowSVG: true,
       contentDispositionType: 'attachment',
@@ -16,6 +16,8 @@ const nextConfig = (phase, { defaultConfig }) => {
     },
   };
   //console.log('nextConfig', JSON.stringify(returnObject, null, 2));
+  console.log('defaultConfig: ', defaultConfig);
+  console.log('returnObject: ', returnObject);
   return { ...(defaultConfig || {}), ...returnObject };
 };
 
