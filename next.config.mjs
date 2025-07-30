@@ -10,11 +10,11 @@ const nextConfig = (phase, { defaultConfig }) => {
     reactStrictMode: isProductionServer ? false : true,
     basePath,
     assetPrefix: isProductionServer ? 'https://abhyankarias.github.io' : '',
-    images: {
-      dangerouslyAllowSVG: true,
-      contentDispositionType: 'attachment',
-      contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    },
+    // images: {
+    //   dangerouslyAllowSVG: true,
+    //   contentDispositionType: 'attachment',
+    //   contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // },
   };
 
   return { ...(defaultConfig || {}), ...returnObject };
