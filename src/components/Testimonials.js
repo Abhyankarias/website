@@ -1,3 +1,8 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+
 import Carousel from './Carousel';
 import Button from './Button';
 
@@ -5,7 +10,7 @@ const TITLE = ` Success stories & testimonial`;
 const ALUMNI_LIST = [
   {
     name: `Swapnil Mahajan`,
-    imgSrc: '/website/images/SwapnilMahajan.png',
+    imgSrc: '/images/SwapnilMahajan.png',
     rank: `IPS, (CSE-2016, AIR-720)`,
     institute: ``,
     text: [
@@ -29,17 +34,17 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Vinod Patil`,
-    imgSrc: '/website/images/VinodPatil.png',
+    imgSrc: '/images/VinodPatil.png',
     rank: `AIR-132, CSE 2019`,
     institute: ``,
     text: [
       `I took guidance from Aashay Abhyankar Sir. I had been scoring average marks. I was made to realise that the way I was approaching the interview was wrong. I found Sir's approach to be unique here and unlike the conventional mock interviews and feedback. This had provided me much needed confidence to face the interview and helped me in getting 132 rank in civil services exam 2019.
-`,
+  `,
     ],
   },
   {
     name: `Maithili Korde`,
-    imgSrc: '/website/images/MaithiliKorde.png',
+    imgSrc: '/images/MaithiliKorde.png',
     rank: `AIR-663, CSE 2017`,
     institute: ``,
     text: [
@@ -49,7 +54,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Kiran S`,
-    imgSrc: '/website/images/KiranS.png',
+    imgSrc: '/images/KiranS.png',
     rank: `AIR-302, CSE-2016`,
     institute: `IRS(IT)`,
     text: [
@@ -62,7 +67,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `G Ravikiran`,
-    imgSrc: '/website/images/GRavikiran.png',
+    imgSrc: '/images/GRavikiran.png',
     rank: `AIR-986, CSE 2014`,
     institute: ``,
     text: [
@@ -71,16 +76,16 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Bharat Reddy`,
-    imgSrc: '/website/images/BharatReddy.png',
+    imgSrc: '/images/BharatReddy.png',
     rank: `AIR-120, CSE-2014`,
     text: [
       `I was fortunate enough to be associated with the ABIAS family for over 5 years and with sir for around 3 and half years.`,
       `The stress on sir’s teaching was always ‘ meaning of each and every word’. A typical class would go like this :
-“Why must one pursue excellence?”`,
+  “Why must one pursue excellence?”`,
       `Like always we’d see each others’ blank faces and reply “To give your best..?”`,
       `“To achieve the best.. ?”. Another student said.`,
       `“Very Sad, why, why why excellence ? Because EVERYTIME I WANT TO GET IT RIGHT! ” Said Sir. These were the words that ingrained in my mind. In this way sir would free our minds and help us identify what our goals must be.
-Another incident I would like to explain here, once a student had asked “Sir, how much must one aim in the optionals ?”`,
+  Another incident I would like to explain here, once a student had asked “Sir, how much must one aim in the optionals ?”`,
       `“What is the maximum mark? “. Sir said.`,
       `“600 sir.”`,
       `“Then you must aim for 600”.`,
@@ -100,7 +105,7 @@ Another incident I would like to explain here, once a student had asked “Sir, 
   },
   {
     name: `Shatarupa Mishra`,
-    imgSrc: '/website/images/ShatarupaMishra.png',
+    imgSrc: '/ShatarupaMishra.png',
     rank: ``,
     institute: `IRS(IT)`,
     text: [
@@ -124,63 +129,115 @@ function truncateText(text) {
 }
 
 export default function Testimonials({ className }) {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
   return (
     <section className={className}>
-      <h1 className='title text-center mb-8'>{TITLE}</h1>
-      <Carousel>
-        {ALUMNI_LIST.map(({ name, imgSrc, rank, institute, text }, index) => {
-          return (
-            <div
-              className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl p-10 gap-4 drop-shadow-md md:flex-row'
-              key={index}
-            >
-              <div className='flex flex-col gap-2'>
-                <div className='mx-auto relative max-h-[170] max-w-[200] md:ms-0'>
-                  <img
-                    className='relative z-[2]'
-                    src={imgSrc}
-                    alt={`Picture of ${name}`}
-                    style={{ maxHeight: '170px' }}
-                  />
-                  {/* <Image
-                    className='relative z-[2] mx-auto md:place-self-start'
-                    style={{ maxHeight: '170px' }}
-                    src={imgSrc}
-                    alt={`Picture of ${name}`}
-                    width={169}
-                    height={170}
-                  /> */}
-                  <div
-                    className='absolute bottom-0 z-[1] h-[139] w-[157] rounded-md '
-                    style={{ background: '#e57b3e' }}
-                  ></div>
+      {isHomePage && <h1 className='title text-center mb-8'>{TITLE}</h1>}
+      {isHomePage ? (
+        // home page
+        <Carousel>
+          {ALUMNI_LIST.map(({ name, imgSrc, rank, institute, text }, index) => {
+            return (
+              <div
+                className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl gap-4 drop-shadow-md md:flex-row'
+                key={index}
+              >
+                <div className='flex flex-col gap-2'>
+                  <div className='mx-auto relative max-h-[170] max-w-[200] md:ms-0'>
+                    <Image
+                      className='relative z-[2] mx-auto md:place-self-start'
+                      style={{ maxHeight: '170px' }}
+                      src={imgSrc}
+                      alt={`Picture of ${name}`}
+                      width={169}
+                      height={170}
+                    />
+                    <div
+                      className='absolute bottom-0 z-[1] h-[139] w-[157] rounded-md'
+                      style={{ background: '#e57b3e' }}
+                    ></div>
+                  </div>
+
+                  <p className='title text-center md:text-left'>
+                    <span>{name}</span>
+                    <br />
+                    <span className='block md:inline-block'>
+                      {rank || institute}
+                    </span>
+                  </p>
                 </div>
 
-                <p className='title text-center md:text-left'>
-                  <span>{name}</span>
-                  <br />
-                  <span className='block md:inline-block'>
-                    {rank || institute}
-                  </span>
-                </p>
+                <div className='flex flex-col gap-2 md:gap-6 md:pt-7'>
+                  <p className='text-center whitespace-pre-wrap md:w-[70ch] md:text-left'>
+                    {truncateText(text[0])}
+                  </p>
+                  <Button
+                    className='font-league-spartan-medium md:max-w-1/5'
+                    text='View Story'
+                    textColorPrimary={false}
+                    backgroundPrimary={false}
+                    style={{ backgroundColor: '#FFF0E8' }}
+                  />
+                </div>
               </div>
+            );
+          })}
+        </Carousel>
+      ) : (
+        // testimonials page
+        <Carousel>
+          {ALUMNI_LIST.map(({ name, imgSrc, rank, institute, text }, index) => {
+            return (
+              <div
+                className='flex flex-col w-full rounded-2xl p-10 gap-4 drop-shadow-md md:flex-row'
+                key={index}
+              >
+                <div className='flex flex-col gap-2'>
+                  <div className='mx-auto relative max-h-[170] max-w-[200] md:ms-0'>
+                    <Image
+                      className='relative z-[2] mx-auto md:place-self-start'
+                      style={{ maxHeight: '170px' }}
+                      src={imgSrc}
+                      alt={`Picture of ${name}`}
+                      width={169}
+                      height={170}
+                    />
+                    <div
+                      className='absolute bottom-0 z-[1] h-[139] w-[157] rounded-md'
+                      style={{ background: '#e57b3e' }}
+                    ></div>
+                  </div>
 
-              <div className='flex flex-col gap-2 md:gap-6 md:pt-7'>
-                <p className='text-center whitespace-pre-wrap md:w-[70ch] md:text-left'>
-                  {truncateText(text[0])}
-                </p>
-                <Button
-                  className='font-league-spartan-medium md:max-w-1/5'
-                  text='View Story'
-                  textColorPrimary={false}
-                  backgroundPrimary={false}
-                  style={{ backgroundColor: '#FFF0E8' }}
-                />
+                  <p className='title text-center md:text-left'>
+                    <span>{name}</span>
+                    <br />
+                    <span className='block md:inline-block'>
+                      {rank || institute}
+                    </span>
+                  </p>
+                </div>
+
+                <div className='flex flex-col gap-2 md:gap-6 md:p-7'>
+                  {text.map((paragraph, idx) => (
+                    <p
+                      key={idx}
+                      className='text-center whitespace-pre-wrap md:w-[70ch] md:text-left'
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                  <div className='flex flex-col gap-2 md:gap-6 md:pt-7'>
+                    <p className='text-center md:text-left'>{'Thank you,'}</p>
+                    <p className='title text-center md:text-left'>{name}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </Carousel>
+            );
+          })}
+        </Carousel>
+      )}
     </section>
   );
 }

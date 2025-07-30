@@ -45,7 +45,7 @@ const Navbar = ({ className }) => {
             className='relative z-[2] mx-auto md:place-self-start'
             height={98}
             width={86}
-            src='/website/images/logo.png'
+            src='/images/logo.png'
             alt='Abhyankar IAS Logo'
           />
         </a>
