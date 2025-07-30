@@ -7,7 +7,7 @@ const nextConfig = (phase, { defaultConfig }) => {
   const isProductionServer = phase === PHASE_PRODUCTION_SERVER;
   const basePath = isProductionServer ? '/website' : '';
   const returnObject = {
-    reactStrictMode: true,
+    reactStrictMode: isProductionServer ? false : true,
     basePath,
     assetPrefix: isProductionServer ? 'https://abhyankarias.github.io' : '',
     images: {
@@ -16,10 +16,7 @@ const nextConfig = (phase, { defaultConfig }) => {
       contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     },
   };
-  console.log('phase', phase);
-  //console.log('nextConfig', JSON.stringify(returnObject, null, 2));
-  // console.log('defaultConfig: ', defaultConfig);
-  // console.log('returnObject: ', returnObject);
+
   return { ...(defaultConfig || {}), ...returnObject };
 };
 
