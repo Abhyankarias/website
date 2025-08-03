@@ -1,6 +1,6 @@
 // import { PHASE_PRODUCTION_SERVER } from 'next/constants.js';
 
-const nextConfig = ({ defaultConfig }) => {
+const nextConfig = () => {
   /**
    * @type {import('next').NextConfig}
    */
@@ -19,7 +19,7 @@ const nextConfig = ({ defaultConfig }) => {
     // },
   };
 
-  return { ...(defaultConfig || {}), ...returnObject };
+  return { ...returnObject };
 };
 
 export default nextConfig;
