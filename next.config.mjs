@@ -2,6 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  basePath: '/website',
 };
 
 export default nextConfig;
