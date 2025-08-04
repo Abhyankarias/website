@@ -3,6 +3,8 @@ import Link from 'next/link';
 import cx from 'classnames';
 import Image from 'next/image';
 
+import logo from '../public/images/logo.png';
+
 import Button from './Button';
 // import abhyankars_ias_logo from '../public/abhyankars_ias_logo.svg';
 
@@ -45,7 +47,7 @@ const Navbar = ({ className }) => {
             className='relative z-[2] mx-auto md:place-self-start'
             height={98}
             width={86}
-            src='/images/logo.png'
+            src={logo}
             alt='Abhyankar IAS Logo'
           />
         </a>
