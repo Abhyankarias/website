@@ -3,10 +3,7 @@ import Link from 'next/link';
 import cx from 'classnames';
 import Image from 'next/image';
 
-import logo from '../public/images/logo.png';
-
 import Button from './Button';
-// import abhyankars_ias_logo from '../public/abhyankars_ias_logo.svg';
 
 const navLinks = [
   { link: 'courses', display: 'Courses' },
@@ -16,41 +13,19 @@ const navLinks = [
 
 const Navbar = ({ className }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
-  //const navbarRef = useRef(null);
-
-  // useEffect(() => {
-  //   const mainContent = document.querySelector('.main-body');
-  //   console.log(
-  //     'mainContent: ',
-  //     mainContent,
-  //     mainContent.getBoundingClientRect().width
-  //   );
-
-  //   if (mainContent && navbarRef.current) {
-  //     const updateNavbarWidth = () => {
-  //       const mainWidth = mainContent.getBoundingClientRect().width;
-  //       navbarRef.current.style.width = `${mainWidth}px`;
-  //     };
-
-  //     updateNavbarWidth(); // Initial update
-  //     window.addEventListener('resize', updateNavbarWidth); // Update on resize
-  //   }
-
-  //   return () => window.removeEventListener('resize', updateNavbarWidth); // Cleanup
-  // }, []);
 
   return (
     <nav className={cx(className, 'navbar col-span-12 py-[20px]')}>
       <div class='flex flex-wrap items-center justify-between'>
-        <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
+        <Link href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
           <Image
             className='relative z-[2] mx-auto md:place-self-start'
             height={98}
             width={86}
-            src={logo}
+            src='/images/logo.png'
             alt='Abhyankar IAS Logo'
           />
-        </a>
+        </Link>
         <button
           data-collapse-toggle='navbar-default'
           type='button'

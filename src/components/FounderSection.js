@@ -24,7 +24,7 @@ export default function FounderSection({ className }) {
             sizes='(max-width: 200)'
             height={169}
             width={200}
-            src='images/AjitAbhyankar.png'
+            src='/images/AjitAbhyankar.png'
             alt='Picture of Dr. Ajit Abhyankar'
           />
           <div
