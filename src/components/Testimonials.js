@@ -10,7 +10,7 @@ const TITLE = ` Success stories & testimonial`;
 const ALUMNI_LIST = [
   {
     name: `Swapnil Mahajan`,
-    imgSrc: '/images/SwapnilMahajan.png',
+    imgSrc: '/website/images/SwapnilMahajan.png',
     rank: `IPS, (CSE-2016, AIR-720)`,
     institute: ``,
     text: [
@@ -34,7 +34,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Vinod Patil`,
-    imgSrc: '/images/VinodPatil.png',
+    imgSrc: '/website/images/VinodPatil.png',
     rank: `AIR-132, CSE 2019`,
     institute: ``,
     text: [
@@ -44,7 +44,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Maithili Korde`,
-    imgSrc: '/images/MaithiliKorde.png',
+    imgSrc: '/website/images/MaithiliKorde.png',
     rank: `AIR-663, CSE 2017`,
     institute: ``,
     text: [
@@ -54,7 +54,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Kiran S`,
-    imgSrc: '/images/KiranS.png',
+    imgSrc: '/website/images/KiranS.png',
     rank: `AIR-302, CSE-2016`,
     institute: `IRS(IT)`,
     text: [
@@ -67,7 +67,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `G Ravikiran`,
-    imgSrc: '/images/GRavikiran.png',
+    imgSrc: '/website/images/GRavikiran.png',
     rank: `AIR-986, CSE 2014`,
     institute: ``,
     text: [
@@ -76,7 +76,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Bharat Reddy`,
-    imgSrc: '/images/BharatReddy.png',
+    imgSrc: '/website/images/BharatReddy.png',
     rank: `AIR-120, CSE-2014`,
     text: [
       `I was fortunate enough to be associated with the ABIAS family for over 5 years and with sir for around 3 and half years.`,
@@ -105,7 +105,7 @@ interact with Dr. Nandkumar Saravade ex-IPS, Mr. Rajesh Tomar of ITBP, Nuclear S
   },
   {
     name: `Shatarupa Mishra`,
-    imgSrc: '/images/ShatarupaMishra.png',
+    imgSrc: '/website/images/ShatarupaMishra.png',
     rank: ``,
     institute: `IRS(IT)`,
     text: [
