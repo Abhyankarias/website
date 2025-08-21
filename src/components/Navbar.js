@@ -1,7 +1,10 @@
+'use client';
+
 import { useState } from 'react';
 import Link from 'next/link';
 import cx from 'classnames';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 import Button from './Button';
 
@@ -14,6 +17,9 @@ const navLinks = [
 const Navbar = ({ className }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
+  const pathname = usePathname();
+  console.log('pathname', pathname);
+
   return (
     <nav className={cx(className, 'navbar col-span-12 py-[20px]')}>
       <div class='flex flex-wrap items-center justify-between'>
@@ -22,7 +28,7 @@ const Navbar = ({ className }) => {
             className='relative z-[2] mx-auto md:place-self-start'
             height={98}
             width={86}
-            src='/website/images/logo.png'
+            src='/website/images/abhyankars_ias_logo.svg'
             alt='Abhyankar IAS Logo'
           />
         </Link>
@@ -91,10 +97,27 @@ const Navbar = ({ className }) => {
               <li key={link}>
                 <Link
                   href={`/${link === 'home' ? '' : link}`}
-                  class='font-league-spartan-medium text-[20px] block py-2 px-3 rounded md:p-0'
+                  class='relative font-league-spartan-medium block text-[20px] py-2 px-3 rounded md:p-0'
                   aria-current='page'
                 >
                   {display}
+                  {pathname === `/${link}` && (
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='auto'
+                      height='4'
+                      className='absolute'
+                      viewBox='0 0 auto 4'
+                      fill='none'
+                    >
+                      <path
+                        d={`M2 2 H${display.length * 10 - 2}`}
+                        stroke='#E57B3E'
+                        stroke-width='3'
+                        stroke-linecap='round'
+                      />
+                    </svg>
+                  )}
                 </Link>
               </li>
             ))}
