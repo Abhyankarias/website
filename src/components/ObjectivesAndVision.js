@@ -30,8 +30,8 @@ function CreateList({ listSet }) {
             className='self-start md:self-center ms-1 me-4'
             src={imgSrc}
             alt={`point ${listIndex}`}
-            width='36px'
-            height='36px'
+            width={36}
+            height={36}
           />
 
           <p className='w-[26ch]  md:w-[82ch]'>{listContent}</p>
