@@ -1,10 +1,6 @@
 @import 'tailwindcss';
 
 :root {
-  /* @media (min-width: 48rem) {
-    --background: url(/images/backgroundImage.jpg);
-  }
-  --background: #ffffff; */
   --foreground: #171717;
 }
 @theme inline {
@@ -16,13 +12,13 @@
   --font-bold: var(--font-libre-baskerville-bold);
   --font-ls-regular: var(--font-league-spartan-regular);
   --font-league-spartan-medium: var(--font-league-spartan-medium);
+  --font-league-spartan-bold: var(--font-league-spartan-bold);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   background-repeat: repeat; /* Prevent image from repeating */
-  /* background-size: cover; Cover the entire body */
   background-attachment: fixed; /* Image remains fixed on scroll */
   background-position: center; /* Center the image */
   color: #000000;
@@ -45,13 +41,6 @@ body {
   font-family: var(--font-league-spartan-bold);
 }
 
-/* .body1 {
-  @apply text-lg;
-}
-.body2 {
-  @apply text-base;
-} */
-
 h1,
 h2,
 h3 {
@@ -71,20 +60,11 @@ h1 {
 h2 {
   font-size: clamp(1.5rem, 2vw + 1.5rem, 1.875rem);
   line-height: normal;
-  /* @apply font-medium md:font-bold;
-  @apply md:text-4xl; */
 }
 
 h3 {
-  /* font-size: 1.125rem; */
-  /* line-height: 1.55; */
   font-weight: 600;
 }
-
-/* button {
-  font-family: var(--font-league-spartan-bold);
-  font-size: 20px;
-} */
 
 p {
   line-height: normal;
