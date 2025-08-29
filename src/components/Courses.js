@@ -1,6 +1,10 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
-import Button from './Button';
+// import FoundationProgramme from '@public/images/FoundationProgramme.png';
+import LearnMore from '@/shared_components/LearnMore';
 
 const TITLE = 'Courses';
 const PROGRAMME_LIST = [
@@ -9,10 +13,10 @@ const PROGRAMME_LIST = [
     imgSrc: '/website/images/FoundationProgramme.png',
     content: [
       'Integrated with 1 years civil service preparations',
-      'Eligibility : 12th pass/ undergraduate',
-      'Duration : 1 Year ( 2 Semesters)',
-      'Intake : 35 students',
-      'Mode: Hybrid ( both online & offline ) mode of attendance would be available',
+      // 'Eligibility : 12th pass/ undergraduate',
+      // 'Duration : 1 Year ( 2 Semesters)',
+      // 'Intake : 35 students',
+      // 'Mode: Hybrid ( both online & offline ) mode of attendance would be available',
     ],
   },
   {
@@ -20,15 +24,17 @@ const PROGRAMME_LIST = [
     imgSrc: '/website/images/MasterInSocialStudies.png',
     content: [
       'Integrated with 2 years civil service preparations',
-      'Eligibility : Graduation/ final year aspirants',
-      'Duration : 2 Years ( 4 Semesters)',
-      'Intake : 35 students',
-      'Mode: Hybrid ( both online & offline ) mode of attendance would be available',
+      // 'Eligibility : Graduation/ final year aspirants',
+      // 'Duration : 2 Years ( 4 Semesters)',
+      // 'Intake : 35 students',
+      // 'Mode: Hybrid ( both online & offline ) mode of attendance would be available',
     ],
   },
 ];
 
 export default function Courses({ className }) {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
   return (
     <section className={className}>
       <h1 className='title text-center mb-8'>{TITLE}</h1>
@@ -38,34 +44,32 @@ export default function Courses({ className }) {
           return (
             <div
               key={index}
-              className='flex flex-col gap-4 bg-[#FFFFFF] rounded-md drop-shadow-md'
+              className='flex flex-col p-4 gap-4 bg-[#FFFFFF] rounded-md drop-shadow-md md:w-auto'
             >
-              <Image
-                className='rounded-md max-h-[171.84px] md:max-h-[234.23px]'
-                src={imgSrc}
-                alt={`Picture of ${name}`}
-                width={169}
-                height={170}
-                // style={{ maxHeight: '171.84px' }}
-              />
+              <div className='relative h-50'>
+                <Image
+                  className='rounded-md'
+                  src={imgSrc}
+                  alt={`Picture of ${name}`}
+                  fill
+                />
+              </div>
 
-              <div className='flex flex-col p-4 gap-2'>
-                <h2 className='title'>{name}</h2>
+              <div className='flex flex-col py-4 gap-4'>
+                <h2 className='title text-center md:text-left'>{name}</h2>
                 {content.map((item, itemIndex) => {
                   return (
-                    <p key={itemIndex} className='font-ls-regular'>
+                    <p
+                      key={itemIndex}
+                      className='font-ls-regular text-center md:text-left'
+                    >
                       {item}
                     </p>
                   );
                 })}
-                <Button
-                  className='font-league-spartan-medium md:w-full'
-                  text='Learn More'
-                  textColorPrimary={false}
-                  backgroundPrimary={false}
-                  style={{ backgroundColor: '#FFF0E8' }}
-                />
               </div>
+
+              <LearnMore />
             </div>
           );
         })}

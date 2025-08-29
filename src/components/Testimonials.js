@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 import Carousel from './Carousel';
 import Button from './Button';
+import LearnMore from '@/shared_components/LearnMore';
 
 const TITLE = ` Success stories & testimonial`;
 const ALUMNI_LIST = [
@@ -141,45 +142,36 @@ export default function Testimonials({ className }) {
           {ALUMNI_LIST.map(({ name, imgSrc, rank, institute, text }, index) => {
             return (
               <div
-                className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl gap-4 drop-shadow-md md:flex-row'
+                className='flex flex-col w-full bg-[#FFF8F5] rounded-2xl gap-4 p-4 drop-shadow-md md:flex-row'
                 key={index}
               >
-                <div className='flex flex-col gap-2'>
-                  <div className='mx-auto relative max-h-[170] max-w-[200] md:ms-0'>
+                <div className='flex flex-col gap-4'>
+                  <div className='mx-auto relative h-[170] w-[200] md:ms-0'>
                     <Image
                       className='relative z-[2] mx-auto md:place-self-start'
-                      style={{ maxHeight: '170px' }}
+                      // style={{ maxHeight: '170px' }}
                       src={imgSrc}
                       alt={`Picture of ${name}`}
                       width={169}
                       height={170}
                     />
                     <div
-                      className='absolute bottom-0 z-[1] h-[139] w-[157] rounded-md'
+                      className='absolute left-0 bottom-0 z-[1] h-[139] w-[157] rounded-md'
                       style={{ background: '#e57b3e' }}
                     ></div>
                   </div>
 
-                  <p className='title text-center md:text-left'>
-                    <span>{name}</span>
-                    <br />
-                    <span className='block md:inline-block'>
-                      {rank || institute}
-                    </span>
-                  </p>
+                  <div className='flex flex-col gap-2 title text-center md:text-left'>
+                    <p>{name}</p>
+                    <p>{rank || institute}</p>
+                  </div>
                 </div>
 
-                <div className='flex flex-col gap-2 md:gap-6 md:pt-7'>
-                  <p className='text-center whitespace-pre-wrap md:w-[70ch] md:text-left'>
+                <div className='flex flex-col gap-3 md:gap-6 md:pt-7'>
+                  <p className='font-regular text-center whitespace-pre-wrap md:text-left'>
                     {truncateText(text[0])}
                   </p>
-                  <Button
-                    className='font-league-spartan-medium md:max-w-1/5'
-                    text='View Story'
-                    textColorPrimary={false}
-                    backgroundPrimary={false}
-                    style={{ backgroundColor: '#FFF0E8' }}
-                  />
+                  <LearnMore />
                 </div>
               </div>
             );
@@ -212,10 +204,7 @@ export default function Testimonials({ className }) {
 
                   <p className='title text-center md:text-left'>
                     <span>{name}</span>
-                    <br />
-                    <span className='block md:inline-block'>
-                      {rank || institute}
-                    </span>
+                    <p className='block md:inline-block'>{rank || institute}</p>
                   </p>
                 </div>
 
@@ -223,7 +212,7 @@ export default function Testimonials({ className }) {
                   {text.map((paragraph, idx) => (
                     <p
                       key={idx}
-                      className='text-center whitespace-pre-wrap md:w-[70ch] md:text-left'
+                      className='font-regular text-center whitespace-pre-wrap md:w-[70ch] md:text-left'
                     >
                       {paragraph}
                     </p>
