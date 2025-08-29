@@ -4,6 +4,7 @@ import AboutUs from '@/components/AboutUs';
 import Testimonials from '@/components/Testimonials';
 import Courses from '@/components/Courses';
 import EffortsAndInnovation from '@/components/EffortsAndInnovation';
+import Outcome from '@/components/Outcome';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Courses className='mt-20' />
       <Testimonials className='mt-20' />
       <EffortsAndInnovation className='mt-20' />
+      <Outcome className='mt-20' />
     </div>
   );
 }

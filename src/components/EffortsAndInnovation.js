@@ -3,7 +3,7 @@ import Image from 'next/image';
 import cx from 'classnames';
 
 const TITLE = 'Our Efforts & Innovation';
-const EFFORTS_AND_INNOVATION = [
+const LIST_OF_EFFORTS_AND_INNOVATION = [
   'Experienced teachers with good academic pedagogic skills.',
   'Tutors for feedback and recapitulation sessions.',
   'Foundational concept-based teaching/ pedagogy based upon NCERT and University recommended texts and journals (additional subject/ issues specific reading/ reference and updating) in the journals in the respective fields and domains.',
@@ -20,7 +20,7 @@ export default function EffortsAndInnovation({ className }) {
     >
       <h2 className='title ml-9'>{TITLE}</h2>
       <ul className='flex flex-col gap-4'>
-        {EFFORTS_AND_INNOVATION.map((list, index) => (
+        {LIST_OF_EFFORTS_AND_INNOVATION.map((list, index) => (
           <li className='flex gap-4'>
             <Image
               src='website/images/point.svg'
