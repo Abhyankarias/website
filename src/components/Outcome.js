@@ -23,7 +23,7 @@ export default function Outcome({ className }) {
         {LIST_OF_OUTCOMES.map((list, index) => (
           <li className='flex gap-4'>
             <Image
-              src='website/images/Point.svg'
+              src='/website/images/Point.svg'
               alt={`Point number ${index + 1}`}
               width={18}
               height={18}
