@@ -15,7 +15,7 @@ export default function EffortsAndInnovation({ className }) {
     <section
       className={cx(
         className,
-        'flex flex-col gap-4 p-4 bg-[#FFFFFF] rounded-md'
+        'flex flex-col gap-4 p-4 bg-[#FFFFFF] drop-shadow-md rounded-md'
       )}
     >
       <h2 className='title ml-9'>{TITLE}</h2>
