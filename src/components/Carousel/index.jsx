@@ -1,4 +1,5 @@
 import React, { Children } from 'react';
+import Image from 'next/image';
 import cx from 'classnames';
 // import {
 //   PrevButton,
@@ -42,19 +43,31 @@ const Carousel = (props) => {
         </div>
       </div>
 
-      {/* <div className='embla__dots'>
+      <div className='flex gap-3 mx-auto w-fit mt-10 embla__dots'>
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
             onClick={() => onDotButtonClick(index)}
-            className={'embla__dot'.concat(
-              index === selectedIndex ? ' embla__dot--selected' : ''
-            )}
+            className='embla__dot'
           >
-            &#x2022;
+            {index === selectedIndex ? (
+              <Image
+                src='/website/images/CarouselDotSelected.svg'
+                alt={`Point number ${index + 1}`}
+                width={14}
+                height={14}
+              />
+            ) : (
+              <Image
+                src='/website/images/CarouselDot.svg'
+                alt={`Point number ${index + 1}`}
+                width={14}
+                height={14}
+              />
+            )}
           </DotButton>
         ))}
-      </div> */}
+      </div>
     </section>
   );
 };
