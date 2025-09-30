@@ -6,7 +6,7 @@ import Courses from '@/components/Courses';
 export default function testimonials() {
   return (
     <Link href='/testimonials'>
-      <div className='container mx-auto'>
+      <div className='container mx-auto px-4'>
         <Testimonials className='mt-20' />
       </div>
     </Link>
