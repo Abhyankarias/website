@@ -47,6 +47,10 @@ export default function MyApp({ Component, pageProps }) {
           content={`Abhynkar's IAS - Best UPSC Coaching in Pune | Interactive Civil Services Classes`}
           key='title'
         />
+        <meta
+          name='google-site-verification'
+          content='Z6fZa7SH4JtvuKqA8ckOluxWw0rb75eQTW_sEvyem38'
+        />
       </Head>
       <Layout style={style}>
         {/* Apply the font class here */}
