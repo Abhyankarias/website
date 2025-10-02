@@ -1,5 +1,5 @@
 'use client';
-import Image, { getImageProps } from 'next/image';
+import { getImageProps } from 'next/image';
 import '@/styles/globals.css';
 import {
   libreBaskervilleRegular,
@@ -33,22 +33,24 @@ export default function MyApp({ Component, pageProps }) {
     height: 320,
     src: '/images/backgroundImage.jpg',
   });
-  // const backgroundImage =
-  //   window.innerWidth > 48 ? getBackgroundImage(srcSet) : `background: #ffffff`;
+
   const backgroundImage = getBackgroundImage(srcSet);
 
-  // For debugging purposes
-  // console.log('window.innerWidth: ', window);
-  // console.log('backgroundImage: ', backgroundImage);
   const style = { height: '100%', width: '100%', backgroundImage };
-
-  console.log('this: ', this);
-  console.log('pageProps: ', pageProps);
 
   return (
     <>
       <Head>
-        <title>Abhyankar’s IAS</title>
+        <title>{`Abhynkar's IAS - Best UPSC Coaching in Pune | Interactive Civil Services Classes`}</title>
+        <meta
+          property='og:title'
+          content={`Abhynkar's IAS - Best UPSC Coaching in Pune | Interactive Civil Services Classes`}
+          key='title'
+        />
+        <meta
+          name='google-site-verification'
+          content='Z6fZa7SH4JtvuKqA8ckOluxWw0rb75eQTW_sEvyem38'
+        />
       </Head>
       <Layout style={style}>
         {/* Apply the font class here */}
