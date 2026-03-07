@@ -171,7 +171,7 @@ export default function Testimonials({ className }) {
                   <p className='font-regular text-center whitespace-pre-wrap md:text-left'>
                     {truncateText(text[0])}
                   </p>
-                  <LearnMore />
+                  <LearnMore href='/testimonials' />
                 </div>
               </div>
             );

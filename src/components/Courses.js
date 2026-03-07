@@ -1,6 +1,3 @@
-'use client';
-
-import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 // import FoundationProgramme from '@public/images/FoundationProgramme.png';
@@ -33,8 +30,6 @@ const PROGRAMME_LIST = [
 ];
 
 export default function Courses({ className }) {
-  const pathname = usePathname();
-  const isHomePage = pathname === '/';
   return (
     <section className={className}>
       <h1 className='title text-center mb-8'>{TITLE}</h1>
@@ -69,7 +64,7 @@ export default function Courses({ className }) {
                 })}
               </div>
 
-              <LearnMore />
+              <LearnMore href='/courses' />
             </div>
           );
         })}
