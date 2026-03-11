@@ -41,10 +41,10 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>{`Abhynkar's IAS - Best UPSC Coaching in Pune | Interactive Civil Services Classes`}</title>
+        <title>{`Abhyankar's IAS - Best UPSC Coaching in Pune | Interactive Civil Services Classes`}</title>
         <meta
           property='og:title'
-          content={`Abhynkar's IAS - Best UPSC Coaching in Pune | Interactive Civil Services Classes`}
+          content={`Abhyankar's IAS - Best UPSC Coaching in Pune | Interactive Civil Services Classes`}
           key='title'
         />
         <meta

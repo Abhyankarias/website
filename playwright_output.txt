@@ -1,0 +1,155 @@
+[1A[2K[2m[WebServer] [22mInvalid DOM property `class`. Did you mean `className`?
+
+[1A[2K[2m[WebServer] [22mInvalid DOM property `stroke-width`. Did you mean `strokeWidth`?
+
+[1A[2K[2m[WebServer] [22mInvalid DOM property `stroke-linecap`. Did you mean `strokeLinecap`?
+[2m[WebServer] [22mInvalid DOM property `stroke-linejoin`. Did you mean `strokeLinejoin`?
+
+[1A[2K[2m[WebServer] [22mEach child in a list should have a unique "key" prop.
+[2m[WebServer] [22m
+[2m[WebServer] [22mCheck the render method of `EffortsAndInnovation`. See https://react.dev/link/warning-keys for more information.
+
+[1A[2K[2m[WebServer] [22mEach child in a list should have a unique "key" prop.
+[2m[WebServer] [22m
+[2m[WebServer] [22mCheck the render method of `Outcome`. See https://react.dev/link/warning-keys for more information.
+
+
+Running 10 tests using 4 workers
+
+[1A[2K[1/10] [chromium] › tests/navigation.spec.js:31:7 › Home page navigation › home page shows truncated testimonials
+[1A[2K[2/10] [chromium] › tests/navigation.spec.js:9:7 › Home page navigation › home page loads successfully
+[1A[2K[3/10] [chromium] › tests/navigation.spec.js:20:7 › Home page navigation › Learn More in Testimonials section links to /testimonials
+[1A[2K[4/10] [chromium] › tests/navigation.spec.js:13:7 › Home page navigation › Learn More in Courses section links to /courses
+[1A[2K[2m[WebServer] [22m [33m[1m⚠[22m[39m Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[2m[WebServer] [22mRead more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+
+[1A[2K[5/10] [chromium] › tests/navigation.spec.js:49:7 › Testimonials page › page content is NOT wrapped in a self-referencing link
+[1A[2K[2m[WebServer] [22m [31m[1m⨯[22m[39m The requested resource isn't a valid image for /images/backgroundImage.jpg received text/html; charset=utf-8
+
+[1A[2K[2m[WebServer] [22m[Error: The requested resource isn't a valid image.] { statusCode: [33m400[39m }
+
+[1A[2K[6/10] [chromium] › tests/navigation.spec.js:59:7 › Testimonials page › testimonial text is selectable (not inside a full-page link)
+[1A[2K[7/10] [chromium] › tests/navigation.spec.js:68:7 › Testimonials page › shows full testimonial text (not truncated)
+[1A[2K[8/10] [chromium] › tests/navigation.spec.js:80:7 › Courses page › page content is NOT wrapped in a self-referencing link
+[1A[2K[2m[WebServer] [22mEach child in a list should have a unique "key" prop.
+[2m[WebServer] [22m
+[2m[WebServer] [22mCheck the render method of `FoundationProgram`. See https://react.dev/link/warning-keys for more information.
+
+[1A[2K[2m[WebServer] [22mEach child in a list should have a unique "key" prop.
+[2m[WebServer] [22m
+[2m[WebServer] [22mCheck the render method of `MasterInSocialStudies`. See https://react.dev/link/warning-keys for more information.
+
+[1A[2K[9/10] [chromium] › tests/navigation.spec.js:89:7 › Courses page › courses detail page renders Foundation Program
+[1A[2K  1) [chromium] › tests/navigation.spec.js:89:7 › Courses page › courses detail page renders Foundation Program 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('heading', { name: /Foundation Program/i })
+    Expected: visible
+    Error: strict mode violation: getByRole('heading', { name: /Foundation Program/i }) resolved to 2 elements:
+        1) <h1 class="title text-center md:text-left">Foundation Program</h1> aka getByRole('heading', { name: 'Foundation Program', exact: true })
+        2) <h2 class="title">Why Foundation Program</h2> aka getByRole('heading', { name: 'Why Foundation Program' })
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('heading', { name: /Foundation Program/i })[22m
+
+
+      89 |   test('courses detail page renders Foundation Program', async ({ page }) => {
+      90 |     const heading = page.getByRole('heading', { name: /Foundation Program/i });
+    > 91 |     await expect(heading).toBeVisible();
+         |                           ^
+      92 |   });
+      93 |
+      94 |   test('courses detail page renders Master In Social Studies', async ({
+        at /Users/koushikdebnath/abhyankar-ias-website/tests/navigation.spec.js:91:27
+
+    Error Context: test-results/navigation-Courses-page-co-24a51--renders-Foundation-Program-chromium/error-context.md
+
+
+[1A[2K[10/10] [chromium] › tests/navigation.spec.js:94:7 › Courses page › courses detail page renders Master In Social Studies
+[1A[2K  2) [chromium] › tests/navigation.spec.js:20:7 › Home page navigation › Learn More in Testimonials section links to /testimonials 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('a[href="/testimonials"]').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('a[href="/testimonials"]').first()[22m
+
+
+      24 |       .locator('a[href="/testimonials"]')
+      25 |       .first();
+    > 26 |     await expect(testimonialsLearnMore).toBeVisible();
+         |                                         ^
+      27 |     await testimonialsLearnMore.click();
+      28 |     await expect(page).toHaveURL(/\/website\/testimonials/);
+      29 |   });
+        at /Users/koushikdebnath/abhyankar-ias-website/tests/navigation.spec.js:26:41
+
+    Error Context: test-results/navigation-Home-page-navig-bf485-ction-links-to-testimonials-chromium/error-context.md
+
+
+[1A[2K  3) [chromium] › tests/navigation.spec.js:9:7 › Home page navigation › home page loads successfully 
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveTitle[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/Abhyankar/[39m
+    Received string:  [31m"Abhynkar's IAS - Best UPSC Coaching in Pune | Interactive Civil Services Classes"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toHaveTitle" with timeout 5000ms[22m
+    [2m    8 × unexpected value "Abhynkar's IAS - Best UPSC Coaching in Pune | Interactive Civil Services Classes"[22m
+
+
+       8 |
+       9 |   test('home page loads successfully', async ({ page }) => {
+    > 10 |     await expect(page).toHaveTitle(/Abhyankar/);
+         |                        ^
+      11 |   });
+      12 |
+      13 |   test('Learn More in Courses section links to /courses', async ({ page }) => {
+        at /Users/koushikdebnath/abhyankar-ias-website/tests/navigation.spec.js:10:24
+
+    Error Context: test-results/navigation-Home-page-navigation-home-page-loads-successfully-chromium/error-context.md
+
+
+[1A[2K  4) [chromium] › tests/navigation.spec.js:13:7 › Home page navigation › Learn More in Courses section links to /courses 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('a[href="/courses"]').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('a[href="/courses"]').first()[22m
+
+
+      13 |   test('Learn More in Courses section links to /courses', async ({ page }) => {
+      14 |     const coursesLearnMore = page.locator('a[href="/courses"]').first();
+    > 15 |     await expect(coursesLearnMore).toBeVisible();
+         |                                    ^
+      16 |     await coursesLearnMore.click();
+      17 |     await expect(page).toHaveURL(/website\/courses/);
+      18 |   });
+        at /Users/koushikdebnath/abhyankar-ias-website/tests/navigation.spec.js:15:36
+
+    Error Context: test-results/navigation-Home-page-navig-610e9-es-section-links-to-courses-chromium/error-context.md
+
+
+[1A[2K  4 failed
+    [chromium] › tests/navigation.spec.js:9:7 › Home page navigation › home page loads successfully 
+    [chromium] › tests/navigation.spec.js:13:7 › Home page navigation › Learn More in Courses section links to /courses 
+    [chromium] › tests/navigation.spec.js:20:7 › Home page navigation › Learn More in Testimonials section links to /testimonials 
+    [chromium] › tests/navigation.spec.js:89:7 › Courses page › courses detail page renders Foundation Program 
+  6 passed (11.3s)
+
+[36m  Serving HTML report at http://localhost:9323. Press Ctrl+C to quit.[39m
