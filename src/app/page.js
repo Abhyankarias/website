@@ -1,10 +1,10 @@
-import HeroSection from '@/components/HeroSection';
-import FounderSection from '@/components/FounderSection';
-import AboutUs from '@/components/AboutUs';
-import Testimonials from '@/components/Testimonials';
-import Courses from '@/components/Courses';
-import EffortsAndInnovation from '@/components/EffortsAndInnovation';
-import Outcome from '@/components/Outcome';
+import HeroSection from '@/components/sections/HeroSection';
+import FounderSection from '@/components/sections/FounderSection';
+import AboutUs from '@/components/sections/AboutUs';
+import Testimonials from '@/components/sections/Testimonials';
+import Courses from '@/components/sections/Courses';
+import EffortsAndInnovation from '@/components/sections/EffortsAndInnovation';
+import Outcome from '@/components/sections/Outcome';
 
 export default function Home() {
   return (
