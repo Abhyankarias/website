@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import Button from '@/components/Button';
+import Button from '@/components/ui/Button';
 
 const HeroSection = ({ className }) => {
   return (
