@@ -6,7 +6,7 @@ import cx from 'classnames';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-import Button from './Button';
+import Button from '@/components/ui/Button';
 
 const navLinks = [
   { link: 'courses', display: 'Courses' },

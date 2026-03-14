@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 // import FoundationProgramme from '@public/images/FoundationProgramme.png';
-import LearnMore from '@/shared_components/LearnMore';
+import LearnMore from '@/components/ui/LearnMore';
 
 const TITLE = 'Courses';
 const PROGRAMME_LIST = [

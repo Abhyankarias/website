@@ -3,9 +3,9 @@
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
-import Carousel from './Carousel';
-import Button from './Button';
-import LearnMore from '@/shared_components/LearnMore';
+import Carousel from '@/components/ui/Carousel';
+import Button from '@/components/ui/Button';
+import LearnMore from '@/components/ui/LearnMore';
 
 const TITLE = ` Success stories & testimonial`;
 const ALUMNI_LIST = [
