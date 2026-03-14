@@ -1,4 +1,4 @@
-import DetailedCourseView from '@/components/DetailedCourseView';
+import DetailedCourseView from '@/components/sections/DetailedCourseView';
 
 export const metadata = {
   title: "Courses | Abhyankar's IAS",
