@@ -1,6 +1,9 @@
-import React from 'react';
-
 import DetailedCourseView from '@/components/DetailedCourseView';
+
+export const metadata = {
+  title: "Courses | Abhyankar's IAS",
+  description: "Detailed Courses and Programs offered by Abhyankar's IAS Coaching in Pune",
+};
 
 export default function CoursesPage() {
   return (
@@ -9,4 +12,3 @@ export default function CoursesPage() {
     </div>
   );
 }
-

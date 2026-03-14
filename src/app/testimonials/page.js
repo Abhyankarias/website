@@ -1,5 +1,9 @@
-import React from 'react';
 import Testimonials from '@/components/Testimonials';
+
+export const metadata = {
+  title: "Testimonials | Abhyankar's IAS",
+  description: "Success stories and reviews from students of Abhyankar's IAS Coaching",
+};
 
 export default function TestimonialsPage() {
   return (
@@ -8,4 +12,3 @@ export default function TestimonialsPage() {
     </div>
   );
 }
-
