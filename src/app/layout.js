@@ -8,8 +8,8 @@ import {
 } from '@/styles/fonts';
 import cx from 'classnames';
 import '@/styles/globals.css';
-import Navbar from '@/components/Navbar';
-import Contact from '@/components/Contact';
+import Navbar from '@/components/layout/Navbar';
+import Contact from '@/components/layout/Contact';
 
 export const metadata = {
   title: "Abhyankar's IAS - Best UPSC Coaching in Pune | Interactive Civil Services Classes",
