@@ -8,12 +8,7 @@ import { usePathname } from 'next/navigation';
 
 import Button from '@/components/ui/Button';
 
-const navLinks = [
-  { link: 'courses', display: 'Courses' },
-  { link: 'blog', display: 'Blog' },
-  { link: 'testimonials', display: 'Testimonials' },
-];
-
+import { navLinks } from '@/data/navigation';
 const Navbar = ({ className }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 

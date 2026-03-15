@@ -2,13 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import cx from 'classnames';
 
-const TITLE = 'Desired Outcome of Our Programme';
-const LIST_OF_OUTCOMES = [
-  'Students should be able to select and read appropriate quality material',
-  'They should be able to dismiss fake and bad material in the market that is often wrongfully persuasive',
-  'Students should be able to reflect on the material read and perspectives acquired and developed; be conceptually groomed and guided; based on proper comprehension of the focal points of the questions asked, be able to seek to or organize answers in logical, coherent manner with her/his information level, perspectives, analytical skills and language skills properly in place.',
-  'Above all, our students should be able to write a unique answer with all the protocols in place and being intellectually persuasive',
-];
+import { OUTCOME_TITLE as TITLE, LIST_OF_OUTCOMES } from '@/data/about';
 
 export default function Outcome({ className }) {
   return (
