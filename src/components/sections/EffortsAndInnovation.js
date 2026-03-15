@@ -2,13 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import cx from 'classnames';
 
-const TITLE = 'Our Efforts & Innovation';
-const LIST_OF_EFFORTS_AND_INNOVATION = [
-  'Experienced teachers with good academic pedagogic skills.',
-  'Tutors for feedback and recapitulation sessions.',
-  'Foundational concept-based teaching/ pedagogy based upon NCERT and University recommended texts and journals (additional subject/ issues specific reading/ reference and updating) in the journals in the respective fields and domains.',
-  'More of interaction (interactive classroom sessions) would be encouraged along with conceptual understanding and analytical depth.',
-];
+import { EFFORTS_AND_INNOVATION_TITLE as TITLE, LIST_OF_EFFORTS_AND_INNOVATION } from '@/data/about';
 
 export default function EffortsAndInnovation({ className }) {
   return (

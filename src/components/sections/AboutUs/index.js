@@ -3,27 +3,7 @@
 import { useState } from 'react';
 import styles from './styles.module.css';
 
-const TITLE = 'About us';
-
-const WHO_ARE_WE = [
-  `Abhyankar’s IAS Academy, founded 20 years ago, by Dr. Ajit Abhyankar was envisioned to bring about an innovative change in an environment of rote - memory-based education.`,
-  `Ajit Sir had passed the civil services exam himself and belongs to a family with more than 10 members in the IAS/IFS and is solely credited with sending many more into the service, only adding to the glory of the Academy and its family. `,
-  `The major thrust at the Academy is on developing a keen, curious and nimble mind, something that has eluded students during previous academic years. `,
-  `The Academy incorporates an exciting innovation in teaching designed to hone the students’ answer-writing skills with clarity and precision, stimulating creativity and enhancing problem-solving skills. `,
-  `The students are put through a grind of innovative and critical thinking that enables them to skilfully unravel and navigate the questions put forth by the examiners in the UPSC and prepare them to be influential decision-makers. Emphasis on this fact has been incorporated into our pedagogical approach.`,
-];
-const OBJECTIVES_AND_VISION = [
-  `The Academy nurtures the objective of preparing students for Civil Services Examinations and meeting the needs of such aspirants through certain modes/ forms of rigorous training/preparation. `,
-  `The Academy is clearly of the opinion that careers in Indian administrative services are challenging and lucrative and the selection process through examinations conducted by the Union Public Service Commission tries to select/ recommend the best of the resources, out of the lakhs who write this exam. `,
-  `The aspirants have to undergo a rigorous examination process comprising of three stages
-Preliminary
- Mains
-Interview`,
-  ` Keeping in mind the academic and intellectual talent (resources) required for such a career and to be able to meet the requirements of selection, the Academy has prepared a broad plan that will cater to this need. `,
-  `This includes incorporating training/ preparatory programs and modules through experienced teachers, mentors, experts, and academics.`,
-  ` These training modules are dynamic in nature so that the aspirants trained at the academy squarely meet the required standards.`,
-  ` In a nutshell, harnessing the young aspirants with the best of the best academic and intellectual support so that they qualify for the examination with distinction and be able to meet the challenges of this career and responsibly serve society is the vision of the Academy`,
-];
+import { ABOUT_US_TITLE as TITLE, WHO_ARE_WE, OBJECTIVES_AND_VISION } from '@/data/about';
 
 export default function AboutUs({ className }) {
   const [whoAreWeExpanded, setWhoAreWeExpanded] = useState(false);
