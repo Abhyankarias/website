@@ -26,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   // Hardcoded for Server Component (replaces next/image getImageProps to avoid client boundary issues in root layout)
   // Background images in App Router root styles are best handled via CSS or inline styles directly without next/image at the <html> level
-  const backgroundImage = 'url("/images/backgroundImage.jpg")';
+  const backgroundImage = 'url("/website/images/backgroundImage.jpg")';
   const style = { height: '100%', width: '100%', backgroundImage, backgroundSize: 'cover', backgroundAttachment: 'fixed' };
 
   return (
