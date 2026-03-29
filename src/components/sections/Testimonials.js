@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 
 import Carousel from '@/components/ui/Carousel';
@@ -16,14 +16,16 @@ function truncateText(text) {
 
 export default function Testimonials({ className }) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const isHomePage = pathname === '/';
+  const startSlide = parseInt(searchParams.get('slide') || '0', 10);
 
   return (
     <section className={className}>
       {isHomePage && <h1 className='title text-center mb-8'>{TITLE}</h1>}
       {isHomePage ? (
         // home page
-        <Carousel>
+        <Carousel showArrows>
           {ALUMNI_LIST.map(({ name, imgSrc, rank, institute, text }, index) => {
             return (
               <div
@@ -56,7 +58,7 @@ export default function Testimonials({ className }) {
                   <p className='font-regular text-center whitespace-pre-wrap md:text-left'>
                     {truncateText(text[0])}
                   </p>
-                  <LearnMore href='/testimonials' />
+                  <LearnMore href={`/testimonials?slide=${index}`} />
                 </div>
               </div>
             );
@@ -64,7 +66,7 @@ export default function Testimonials({ className }) {
         </Carousel>
       ) : (
         // testimonials page
-        <Carousel>
+        <Carousel showArrows arrowClassName='md:!top-[250px] md:!translate-y-0' options={{ startIndex: startSlide }}>
           {ALUMNI_LIST.map(({ name, imgSrc, rank, institute, text }, index) => {
             return (
               <div

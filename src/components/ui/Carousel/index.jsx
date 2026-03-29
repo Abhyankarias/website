@@ -3,29 +3,28 @@
 import React, { Children } from 'react';
 import Image from 'next/image';
 import cx from 'classnames';
-// import {
-//   PrevButton,
-//   NextButton,
-//   usePrevNextButtons,
-// } from './CarouselArrowButtons';
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons,
+} from './CarouselArrowButtons';
 
 import { DotButton, useDotButton } from './CarouselDotButton';
 import styles from './carousel.module.css';
 import useEmblaCarousel from 'embla-carousel-react';
 
 const Carousel = (props) => {
-  const { options, className, children } = props;
+  const { options, className, children, showArrows = false, arrowClassName } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-  // const slideCount = Children.count(children);
 
   const containerClasses = cx('container mx-auto', styles.embla__viewport);
 
-  // const {
-  //   prevBtnDisabled,
-  //   nextBtnDisabled,
-  //   onPrevButtonClick,
-  //   onNextButtonClick,
-  // } = usePrevNextButtons(emblaApi);
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -44,6 +43,21 @@ const Carousel = (props) => {
           ))}
         </div>
       </div>
+
+      {showArrows && (
+        <>
+          <PrevButton
+            className={cx(styles.embla__arrow_prev, arrowClassName)}
+            onClick={onPrevButtonClick}
+            disabled={prevBtnDisabled}
+          />
+          <NextButton
+            className={cx(styles.embla__arrow_next, arrowClassName)}
+            onClick={onNextButtonClick}
+            disabled={nextBtnDisabled}
+          />
+        </>
+      )}
 
       <div className='flex gap-3 mx-auto w-fit mt-10 embla__dots'>
         {scrollSnaps.map((_, index) => (

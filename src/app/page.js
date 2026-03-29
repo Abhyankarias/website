@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import HeroSection from '@/components/sections/HeroSection';
 import FounderSection from '@/components/sections/FounderSection';
 import AboutUs from '@/components/sections/AboutUs';
@@ -13,7 +14,9 @@ export default function Home() {
       <FounderSection className='mt-20' />
       <AboutUs className='mt-20' />
       <Courses className='mt-20' />
-      <Testimonials className='mt-20' />
+      <Suspense>
+        <Testimonials className='mt-20' />
+      </Suspense>
       <EffortsAndInnovation className='mt-20' />
       <Outcome className='mt-20' />
     </div>
