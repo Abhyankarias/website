@@ -29,8 +29,6 @@ const Carousel = (props) => {
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
 
-  console.log('scrollSnaps; ', scrollSnaps);
-
   let slideIndex = 0;
   return (
     <section className={cx(styles.embla, 'md:relative', className)}>

@@ -13,12 +13,11 @@ const Navbar = ({ className }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const pathname = usePathname();
-  console.log('pathname', pathname);
 
   return (
     <nav className={cx(className, 'navbar col-span-12 py-[20px]')}>
-      <div class='flex flex-wrap items-center justify-between'>
-        <Link href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
+      <div className='flex flex-wrap items-center justify-between'>
+        <Link href='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
           <Image
             className='relative z-[2] mx-auto md:place-self-start'
             height={98}
@@ -30,14 +29,14 @@ const Navbar = ({ className }) => {
         <button
           data-collapse-toggle='navbar-default'
           type='button'
-          class='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200'
+          className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200'
           aria-controls='navbar-default'
           aria-expanded='false'
           onClick={() => {
             setIsCollapsed((prev) => !prev);
           }}
         >
-          <span class='sr-only'>Open main menu</span>
+          <span className='sr-only'>Open main menu</span>
 
           <svg
             width='24'
@@ -49,42 +48,42 @@ const Navbar = ({ className }) => {
             <path
               d='M18 10H6'
               stroke='black'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
             />
             <path
               d='M21 6H3'
               stroke='black'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
             />
             <path
               d='M21 14H3'
               stroke='black'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
             />
             <path
               d='M18 18H6'
               stroke='black'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
             />
           </svg>
         </button>
         <div
-          class={cx('w-full md:block md:w-auto', {
+          className={cx('w-full md:block md:w-auto', {
             hidden: isCollapsed,
             relative: isCollapsed,
           })}
           id='navbar-default'
         >
           <ul
-            class={cx(
+            className={cx(
               'flex flex-col items-center p-4 h-fit md:p-0 mt-4 md:flex-row md:gap-[37px] rtl:space-x-reverse md:mt-0 md:border-0 text-base'
             )}
           >
@@ -92,7 +91,7 @@ const Navbar = ({ className }) => {
               <li key={link}>
                 <Link
                   href={`/${link === 'home' ? '' : link}`}
-                  class='relative font-league-spartan-medium block text-[20px] py-2 px-3 rounded md:p-0'
+                  className='relative font-league-spartan-medium block text-[20px] py-2 px-3 rounded md:p-0'
                   aria-current='page'
                 >
                   {display}
@@ -108,8 +107,8 @@ const Navbar = ({ className }) => {
                       <path
                         d={`M2 2 H${display.length * 10 - 2}`}
                         stroke='#E57B3E'
-                        stroke-width='3'
-                        stroke-linecap='round'
+                        strokeWidth='3'
+                        strokeLinecap='round'
                       />
                     </svg>
                   )}
